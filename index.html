@@ -11,10 +11,11 @@
             margin: 0 auto;
             padding: 20px;
         }
-        #searchInput {
+        #searchInput, #excludeInput {
             width: 100%;
             padding: 10px;
             font-size: 16px;
+            margin-bottom: 10px;
         }
         #results {
             margin-top: 20px;
@@ -45,7 +46,7 @@
             border-top: 1px solid #eee;
             padding: 10px;
         }
-        #suggestions {
+        #suggestions, #excludeSuggestions {
             position: absolute;
             width: 100%;
             max-height: 200px;
@@ -73,6 +74,9 @@
             cursor: pointer;
             margin-left: 5px;
         }
+        .exclude-token {
+            background-color: #ffcccb;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
@@ -83,16 +87,25 @@
         <input type="text" id="searchInput" placeholder="Enter search terms...">
         <div id="suggestions"></div>
     </div>
+    <div style="position: relative;">
+        <div id="excludeTokenContainer"></div>
+        <input type="text" id="excludeInput" placeholder="Enter terms to exclude...">
+        <div id="excludeSuggestions"></div>
+    </div>
     <div id="results"></div>
 
     <script>
         const searchInput = document.getElementById('searchInput');
+        const excludeInput = document.getElementById('excludeInput');
         const suggestionsDiv = document.getElementById('suggestions');
+        const excludeSuggestionsDiv = document.getElementById('excludeSuggestions');
         const resultsDiv = document.getElementById('results');
         const tokenContainer = document.getElementById('tokenContainer');
+        const excludeTokenContainer = document.getElementById('excludeTokenContainer');
         let debounceTimer;
         let allTokens = [];
         let selectedTokens = [];
+        let excludeTokens = [];
 
         // Fetch all tokens when the page loads
         fetchAllTokens();
@@ -103,36 +116,51 @@
         searchInput.addEventListener('input', () => {
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(() => {
-                showSuggestions();
+                showSuggestions(searchInput, suggestionsDiv, selectedTokens);
+            }, 300);
+        });
+
+        excludeInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                showSuggestions(excludeInput, excludeSuggestionsDiv, excludeTokens);
             }, 300);
         });
 
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' && searchInput.value.trim() !== '') {
-                addToken(searchInput.value.trim());
+                addToken(searchInput.value.trim(), selectedTokens, tokenContainer);
                 searchInput.value = '';
+                performSearch();
+            }
+        });
+
+        excludeInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && excludeInput.value.trim() !== '') {
+                addToken(excludeInput.value.trim(), excludeTokens, excludeTokenContainer, true);
+                excludeInput.value = '';
                 performSearch();
             }
         });
 
         async function fetchAllTokens() {
             try {
-                const response = await fetch('http://localhost:8000/all_tokens');
+                const response = await fetch('/all_tokens');
                 allTokens = await response.json();
             } catch (error) {
                 console.error('Error fetching all tokens:', error);
             }
         }
 
-        function showSuggestions() {
-            const query = searchInput.value.trim().toLowerCase();
+        function showSuggestions(input, suggestionsDiv, tokenList) {
+            const query = input.value.trim().toLowerCase();
             if (query === '') {
                 suggestionsDiv.innerHTML = '';
                 return;
             }
 
             const matchingTokens = allTokens.filter(token => 
-                token.toLowerCase().startsWith(query) && !selectedTokens.includes(token)
+                token.toLowerCase().startsWith(query) && !tokenList.includes(token)
             ).slice(0, 5);
 
             const suggestionsHtml = matchingTokens.map(token => 
@@ -144,38 +172,42 @@
             const suggestionItems = suggestionsDiv.getElementsByClassName('suggestion-item');
             for (let item of suggestionItems) {
                 item.addEventListener('click', () => {
-                    addToken(item.textContent);
-                    searchInput.value = '';
+                    addToken(item.textContent, tokenList, input === searchInput ? tokenContainer : excludeTokenContainer, input === excludeInput);
+                    input.value = '';
                     suggestionsDiv.innerHTML = '';
                     performSearch();
                 });
             }
         }
 
-        function addToken(token) {
-            if (!selectedTokens.includes(token)) {
-                selectedTokens.push(token);
-                updateTokenDisplay();
+        function addToken(token, tokenList, container, isExclude = false) {
+            if (!tokenList.includes(token)) {
+                tokenList.push(token);
+                updateTokenDisplay(tokenList, container, isExclude);
                 updateURL();
             }
         }
 
-        function removeToken(token) {
-            selectedTokens = selectedTokens.filter(t => t !== token);
-            updateTokenDisplay();
-            updateURL();
-            performSearch();
+        function removeToken(token, tokenList, container, isExclude = false) {
+            const index = tokenList.indexOf(token);
+            if (index > -1) {
+                tokenList.splice(index, 1);
+                updateTokenDisplay(tokenList, container, isExclude);
+                updateURL();
+                performSearch();
+            }
         }
 
-        function updateTokenDisplay() {
-            tokenContainer.innerHTML = selectedTokens.map(token => 
-                `<span class="token">${token}<span class="token-remove" onclick="removeToken('${token}')">&times;</span></span>`
+        function updateTokenDisplay(tokenList, container, isExclude = false) {
+            container.innerHTML = tokenList.map(token => 
+                `<span class="token ${isExclude ? 'exclude-token' : ''}">${token}<span class="token-remove" onclick="removeToken('${token}', ${isExclude ? 'excludeTokens' : 'selectedTokens'}, ${isExclude ? 'excludeTokenContainer' : 'tokenContainer'}, ${isExclude})">&times;</span></span>`
             ).join('');
         }
 
         function updateURL() {
             const searchParams = new URLSearchParams();
             selectedTokens.forEach(token => searchParams.append('tokens', token));
+            excludeTokens.forEach(token => searchParams.append('exclude', token));
             const newURL = `${window.location.pathname}?${searchParams.toString()}`;
             history.pushState(null, '', newURL);
         }
@@ -183,19 +215,21 @@
         function loadTokensFromURL() {
             const searchParams = new URLSearchParams(window.location.search);
             const tokens = searchParams.getAll('tokens');
-            tokens.forEach(token => addToken(token));
-            if (tokens.length > 0) {
+            const excludes = searchParams.getAll('exclude');
+            tokens.forEach(token => addToken(token, selectedTokens, tokenContainer));
+            excludes.forEach(token => addToken(token, excludeTokens, excludeTokenContainer, true));
+            if (tokens.length > 0 || excludes.length > 0) {
                 performSearch();
             }
         }
 
         async function performSearch() {
-            if (selectedTokens.length === 0) {
+            if (selectedTokens.length === 0 && excludeTokens.length === 0) {
                 resultsDiv.innerHTML = '';
                 return;
             }
 
-            const url = `http://localhost:8000/search?${selectedTokens.map(t => `tokens=${encodeURIComponent(t)}`).join('&')}`;
+            const url = `/search?${selectedTokens.map(t => `tokens=${encodeURIComponent(t)}`).join('&')}&${excludeTokens.map(t => `exclude_tokens=${encodeURIComponent(t)}`).join('&')}`;
 
             try {
                 const response = await fetch(url);

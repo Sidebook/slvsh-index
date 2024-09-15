@@ -13,13 +13,18 @@ with open("slvsh_index.json", "r") as f:
 @app.get("/search")
 async def search_entries(
     tokens: List[str] = Query(..., description="List of tokens to search for"),
-    page: int = Query(1, ge=1, description="Page number"),
-    page_size: int = Query(10, ge=1, le=100, description="Number of items per page")
+    exclude_tokens: List[str] = Query([], description="List of tokens to exclude")
 ):
     
     # Filter entries that contain all specified tokens in either tokens or title
-    return [entry for entry in slvsh_index
-        if all(token.upper() in entry["tokens"] or token.upper() in entry["title"].upper() for token in tokens)]
+    # and exclude entries that contain any of the excluded tokens
+    filtered_entries = [
+        entry for entry in slvsh_index
+        if all(token.upper() in entry["tokens"] or token.upper() in entry["title"].upper() for token in tokens)
+        and not any(exclude_token.upper() in entry["tokens"] or exclude_token.upper() in entry["title"].upper() for exclude_token in exclude_tokens)
+    ]
+
+    return filtered_entries
 
 @app.get("/")
 async def read_index():
