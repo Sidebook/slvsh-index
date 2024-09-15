@@ -4,95 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLVSH INDEX</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        #searchInput, #excludeInput {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        #results {
-            margin-top: 20px;
-        }
-        .result-group {
-            margin-bottom: 30px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .result-group-header {
-            display: flex;
-            align-items: center;
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-        .result-thumbnail {
-            width: 120px;
-            height: 90px;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-        .result-title {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .result-item {
-            border-top: 1px solid #eee;
-            padding: 10px;
-        }
-        #suggestions, #excludeSuggestions {
-            position: absolute;
-            width: 100%;
-            max-height: 200px;
-            overflow-y: auto;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        .suggestion-item {
-            padding: 10px;
-            cursor: pointer;
-        }
-        .suggestion-item:hover {
-            background-color: #f0f0f0;
-        }
-        .token {
-            display: inline-block;
-            background-color: #e0e0e0;
-            padding: 5px 10px;
-            margin: 2px;
-            border-radius: 3px;
-        }
-        .token-remove {
-            cursor: pointer;
-            margin-left: 5px;
-        }
-        .exclude-token {
-            background-color: #ffcccb;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
-<body>
-    <h1>SLVSH Search</h1>
-    <div style="position: relative;">
-        <div id="tokenContainer"></div>
-        <input type="text" id="searchInput" placeholder="Enter search terms...">
-        <div id="suggestions"></div>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <h1 class="text-3xl font-bold mb-6 text-center">SLVSH Search</h1>
+        
+        <div class="flex space-x-4">
+            <div class="w-1/2 relative flex flex-col">
+                <div id="tokenContainer" class="flex flex-wrap mb-2 flex-grow"></div>
+                <div class="mt-auto">
+                    <input type="text" id="searchInput" placeholder="Match - CORK, BLENDER, ..." class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <div id="suggestions" class="absolute w-full bg-white border border-gray-300 rounded-md shadow-lg mt-1 max-h-60 overflow-y-auto z-10 hidden"></div>
+                </div>
+            </div>
+            
+            <div class="w-1/2 relative flex flex-col">
+                <div id="excludeTokenContainer" class="flex flex-wrap mb-2 flex-grow"></div>
+                <div class="mt-auto">
+                    <input type="text" id="excludeInput" placeholder="Unmatch" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                    <div id="excludeSuggestions" class="absolute w-full bg-white border border-gray-300 rounded-md shadow-lg mt-1 max-h-60 overflow-y-auto z-10 hidden"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap justify-start gap-2 items-center">
+            <p class="text-sm text-gray-600">Examples:</p>
+            <div class="flex flex-wrap gap-2">
+                <a href="/?tokens=SW&tokens=CORK" class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md text-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" onclick="setExampleQuery('SW CORK'); return false;">SW CORK</a>
+                <a href="/?tokens=BLENDER&tokens=JOONA" class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md text-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" onclick="setExampleQuery('BLENDER JOONA'); return false;">BLENDER JOONA</a>
+                <a href="/?tokens=LIP&exclude=SW" class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md text-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" onclick="setExampleQuery('LIP', 'SW'); return false;">LIP (without SW)</a>
+            </div>
+        </div>
+        
+        <div id="results" class="mt-8"></div>
     </div>
-    <div style="position: relative;">
-        <div id="excludeTokenContainer"></div>
-        <input type="text" id="excludeInput" placeholder="Enter terms to exclude...">
-        <div id="excludeSuggestions"></div>
-    </div>
-    <div id="results"></div>
 
     <script>
         const searchInput = document.getElementById('searchInput');
@@ -107,10 +54,7 @@
         let selectedTokens = [];
         let excludeTokens = [];
 
-        // Fetch all tokens when the page loads
         fetchAllTokens();
-
-        // Load tokens from URL if present
         loadTokensFromURL();
 
         searchInput.addEventListener('input', () => {
@@ -125,6 +69,27 @@
             debounceTimer = setTimeout(() => {
                 showSuggestions(excludeInput, excludeSuggestionsDiv, excludeTokens);
             }, 300);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
+                suggestionsDiv.classList.add('hidden');
+            }
+            if (!excludeInput.contains(e.target) && !excludeSuggestionsDiv.contains(e.target)) {
+                excludeSuggestionsDiv.classList.add('hidden');
+            }
+        });
+
+        searchInput.addEventListener('focus', () => {
+            if (searchInput.value.trim() !== '') {
+                showSuggestions(searchInput, suggestionsDiv, selectedTokens);
+            }
+        });
+
+        excludeInput.addEventListener('focus', () => {
+            if (excludeInput.value.trim() !== '') {
+                showSuggestions(excludeInput, excludeSuggestionsDiv, excludeTokens);
+            }
         });
 
         searchInput.addEventListener('keydown', (e) => {
@@ -156,6 +121,7 @@
             const query = input.value.trim().toLowerCase();
             if (query === '') {
                 suggestionsDiv.innerHTML = '';
+                suggestionsDiv.classList.add('hidden');
                 return;
             }
 
@@ -163,29 +129,39 @@
                 token.toLowerCase().startsWith(query) && !tokenList.includes(token)
             ).slice(0, 5);
 
-            const suggestionsHtml = matchingTokens.map(token => 
-                `<div class="suggestion-item">${token}</div>`
-            ).join('');
+            if (matchingTokens.length > 0) {
+                const suggestionsHtml = matchingTokens.map(token => 
+                    `<div class="suggestion-item p-2 hover:bg-gray-100 cursor-pointer">${token}</div>`
+                ).join('');
 
-            suggestionsDiv.innerHTML = suggestionsHtml;
+                suggestionsDiv.innerHTML = suggestionsHtml;
+                suggestionsDiv.classList.remove('hidden');
 
-            const suggestionItems = suggestionsDiv.getElementsByClassName('suggestion-item');
-            for (let item of suggestionItems) {
-                item.addEventListener('click', () => {
-                    addToken(item.textContent, tokenList, input === searchInput ? tokenContainer : excludeTokenContainer, input === excludeInput);
-                    input.value = '';
-                    suggestionsDiv.innerHTML = '';
-                    performSearch();
-                });
+                const suggestionItems = suggestionsDiv.getElementsByClassName('suggestion-item');
+                for (let item of suggestionItems) {
+                    item.addEventListener('click', () => {
+                        addToken(item.textContent, tokenList, input === searchInput ? tokenContainer : excludeTokenContainer, input === excludeInput);
+                        input.value = '';
+                        suggestionsDiv.innerHTML = '';
+                        suggestionsDiv.classList.add('hidden');
+                        performSearch();
+                    });
+                }
+            } else {
+                suggestionsDiv.innerHTML = '';
+                suggestionsDiv.classList.add('hidden');
             }
         }
 
         function addToken(token, tokenList, container, isExclude = false) {
-            if (!tokenList.includes(token)) {
-                tokenList.push(token);
-                updateTokenDisplay(tokenList, container, isExclude);
-                updateURL();
-            }
+            const tokens = token.split(' ').filter(t => t.trim() !== '');
+            tokens.forEach(t => {
+                if (!tokenList.includes(t)) {
+                    tokenList.push(t);
+                }
+            });
+            updateTokenDisplay(tokenList, container, isExclude);
+            updateURL();
         }
 
         function removeToken(token, tokenList, container, isExclude = false) {
@@ -200,7 +176,12 @@
 
         function updateTokenDisplay(tokenList, container, isExclude = false) {
             container.innerHTML = tokenList.map(token => 
-                `<span class="token ${isExclude ? 'exclude-token' : ''}">${token}<span class="token-remove" onclick="removeToken('${token}', ${isExclude ? 'excludeTokens' : 'selectedTokens'}, ${isExclude ? 'excludeTokenContainer' : 'tokenContainer'}, ${isExclude})">&times;</span></span>`
+                `<span class="inline-flex items-center px-2 py-1 mr-2 mb-2 text-sm font-medium rounded-full ${isExclude ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'}">
+                    ${token}
+                    <button type="button" class="ml-1 inline-flex items-center p-0.5 text-sm bg-transparent rounded-full hover:bg-${isExclude ? 'red' : 'blue'}-200" onclick="removeToken('${token}', ${isExclude ? 'excludeTokens' : 'selectedTokens'}, ${isExclude ? 'excludeTokenContainer' : 'tokenContainer'}, ${isExclude})">
+                        <svg aria-hidden="true" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </span>`
             ).join('');
         }
 
@@ -237,13 +218,13 @@
                 displayResults(data);
             } catch (error) {
                 console.error('Error fetching search results:', error);
-                resultsDiv.innerHTML = '<p>Error fetching results. Please try again.</p>';
+                resultsDiv.innerHTML = '<p class="text-red-500">Error fetching results. Please try again.</p>';
             }
         }
 
         function displayResults(results) {
             if (results.length === 0) {
-                resultsDiv.innerHTML = '<p>No results found.</p>';
+                resultsDiv.innerHTML = '<p class="text-gray-500">No results found.</p>';
                 return;
             }
 
@@ -251,26 +232,40 @@
             const resultsHtml = Object.entries(groupedResults).map(([title, group]) => {
                 const thumbnailUrl = `https://img.youtube.com/vi/${getYoutubeId(group[0].url)}/mqdefault.jpg`;
                 const groupHtml = `
-                    <div class="result-group">
-                        <div class="result-group-header">
-                            <img class="result-thumbnail" src="${thumbnailUrl}" alt="${title}">
-                            <h3 class="result-title">${title}</h3>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden mb-3">
+                        <div class="flex items-center p-4 bg-gray-50">
+                            <img class="w-24 h-18 object-cover mr-4" src="${thumbnailUrl}" alt="${title}">
+                            <div>
+                                <h3 class="text-xl font-semibold">${highlightMatches(title, [...selectedTokens, ...excludeTokens])}</h3>
+                                ${(() => {
+                                    const latestUploadDate = moment(Math.max(...group.map(r => parseInt(r.upload_date))), "YYYYMMDD");
+                                    return `<p class="text-sm text-gray-600">${latestUploadDate.format('MMMM D, YYYY')} (${latestUploadDate.fromNow()})</p>`;
+                                })()}
+                            </div>
                         </div>
-                        ${group.map(result => {
-                            const uploadDate = moment(result.upload_date, "YYYYMMDD");
-                            const timeAgo = uploadDate.fromNow();
-                            return `
-                                <div class="result-item">
-                                    <p>Tokens: ${result.tokens.join(', ')}</p>
-                                    <p>Upload Date: ${result.upload_date} (${timeAgo})</p>
-                                    <p><a href="${result.url}" target="_blank">Watch Video</a></p>
-                                </div>
-                            `;
-                        }).join('')}
+                        <div class="p-4">
+                            ${group.map(result => `
+                                <dl class="mb-2">
+                                    <dt class="inline-block font-bold mr-2">${Math.floor(result.start / 60)}:${(Math.floor(result.start % 60)).toString().padStart(2, '0')}</dt>
+                                    <dd class="inline">
+                                        <a href="${result.url}" target="_blank" class="text-blue-500 hover:underline">${highlightMatches(result.tokens.join(', '), [...selectedTokens, ...excludeTokens])}</a>
+                                    </dd>
+                                </dl>
+                            `).join('')}
+                        </div>
                     </div>
                 `;
                 return groupHtml;
             }).join('');
+
+            function highlightMatches(text, tokens) {
+                let highlightedText = text;
+                tokens.forEach(token => {
+                    const regex = new RegExp(token, 'gi');
+                    highlightedText = highlightedText.replace(regex, match => `<span class="bg-yellow-200">${match}</span>`);
+                });
+                return highlightedText;
+            }
 
             resultsDiv.innerHTML = resultsHtml;
         }
