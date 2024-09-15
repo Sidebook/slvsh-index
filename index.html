@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLVSH INDEX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .result-group {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .result-group-header {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .result-thumbnail {
+            width: 120px;
+            height: 90px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        .result-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .result-item {
+            border-top: 1px solid #eee;
+            padding: 10px;
+        }
+        #suggestions {
+            position: absolute;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+        .token {
+            display: inline-block;
+            background-color: #e0e0e0;
+            padding: 5px 10px;
+            margin: 2px;
+            border-radius: 3px;
+        }
+        .token-remove {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <h1>SLVSH Search</h1>
+    <div style="position: relative;">
+        <div id="tokenContainer"></div>
+        <input type="text" id="searchInput" placeholder="Enter search terms...">
+        <div id="suggestions"></div>
+    </div>
+    <div id="results"></div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const suggestionsDiv = document.getElementById('suggestions');
+        const resultsDiv = document.getElementById('results');
+        const tokenContainer = document.getElementById('tokenContainer');
+        let debounceTimer;
+        let allTokens = [];
+        let selectedTokens = [];
+
+        // Fetch all tokens when the page loads
+        fetchAllTokens();
+
+        // Load tokens from URL if present
+        loadTokensFromURL();
+
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                showSuggestions();
+            }, 300);
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+                addToken(searchInput.value.trim());
+                searchInput.value = '';
+                performSearch();
+            }
+        });
+
+        async function fetchAllTokens() {
+            try {
+                const response = await fetch('http://localhost:8000/all_tokens');
+                allTokens = await response.json();
+            } catch (error) {
+                console.error('Error fetching all tokens:', error);
+            }
+        }
+
+        function showSuggestions() {
+            const query = searchInput.value.trim().toLowerCase();
+            if (query === '') {
+                suggestionsDiv.innerHTML = '';
+                return;
+            }
+
+            const matchingTokens = allTokens.filter(token => 
+                token.toLowerCase().startsWith(query) && !selectedTokens.includes(token)
+            ).slice(0, 5);
+
+            const suggestionsHtml = matchingTokens.map(token => 
+                `<div class="suggestion-item">${token}</div>`
+            ).join('');
+
+            suggestionsDiv.innerHTML = suggestionsHtml;
+
+            const suggestionItems = suggestionsDiv.getElementsByClassName('suggestion-item');
+            for (let item of suggestionItems) {
+                item.addEventListener('click', () => {
+                    addToken(item.textContent);
+                    searchInput.value = '';
+                    suggestionsDiv.innerHTML = '';
+                    performSearch();
+                });
+            }
+        }
+
+        function addToken(token) {
+            if (!selectedTokens.includes(token)) {
+                selectedTokens.push(token);
+                updateTokenDisplay();
+                updateURL();
+            }
+        }
+
+        function removeToken(token) {
+            selectedTokens = selectedTokens.filter(t => t !== token);
+            updateTokenDisplay();
+            updateURL();
+            performSearch();
+        }
+
+        function updateTokenDisplay() {
+            tokenContainer.innerHTML = selectedTokens.map(token => 
+                `<span class="token">${token}<span class="token-remove" onclick="removeToken('${token}')">&times;</span></span>`
+            ).join('');
+        }
+
+        function updateURL() {
+            const searchParams = new URLSearchParams();
+            selectedTokens.forEach(token => searchParams.append('tokens', token));
+            const newURL = `${window.location.pathname}?${searchParams.toString()}`;
+            history.pushState(null, '', newURL);
+        }
+
+        function loadTokensFromURL() {
+            const searchParams = new URLSearchParams(window.location.search);
+            const tokens = searchParams.getAll('tokens');
+            tokens.forEach(token => addToken(token));
+            if (tokens.length > 0) {
+                performSearch();
+            }
+        }
+
+        async function performSearch() {
+            if (selectedTokens.length === 0) {
+                resultsDiv.innerHTML = '';
+                return;
+            }
+
+            const url = `http://localhost:8000/search?${selectedTokens.map(t => `tokens=${encodeURIComponent(t)}`).join('&')}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                console.error('Error fetching search results:', error);
+                resultsDiv.innerHTML = '<p>Error fetching results. Please try again.</p>';
+            }
+        }
+
+        function displayResults(results) {
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            const groupedResults = groupResultsByTitle(results);
+            const resultsHtml = Object.entries(groupedResults).map(([title, group]) => {
+                const thumbnailUrl = `https://img.youtube.com/vi/${getYoutubeId(group[0].url)}/mqdefault.jpg`;
+                const groupHtml = `
+                    <div class="result-group">
+                        <div class="result-group-header">
+                            <img class="result-thumbnail" src="${thumbnailUrl}" alt="${title}">
+                            <h3 class="result-title">${title}</h3>
+                        </div>
+                        ${group.map(result => {
+                            const uploadDate = moment(result.upload_date, "YYYYMMDD");
+                            const timeAgo = uploadDate.fromNow();
+                            return `
+                                <div class="result-item">
+                                    <p>Tokens: ${result.tokens.join(', ')}</p>
+                                    <p>Upload Date: ${result.upload_date} (${timeAgo})</p>
+                                    <p><a href="${result.url}" target="_blank">Watch Video</a></p>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+                return groupHtml;
+            }).join('');
+
+            resultsDiv.innerHTML = resultsHtml;
+        }
+
+        function groupResultsByTitle(results) {
+            return results.reduce((acc, result) => {
+                if (!acc[result.title]) {
+                    acc[result.title] = [];
+                }
+                acc[result.title].push(result);
+                return acc;
+            }, {});
+        }
+
+        function getYoutubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+    </script>
+</body>
+</html>
