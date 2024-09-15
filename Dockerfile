@@ -20,4 +20,4 @@ EXPOSE 8000
 ENV NAME World
 
 # Run server.py when the container launches
-CMD ["python", "server.py"]
+CMD ["uvicorn", "server:app", "--host=0.0.0.0"]

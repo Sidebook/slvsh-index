@@ -1,3 +1,4 @@
 yt-dlp==2024.8.6
 fastapi==0.114.2
 opencv-python==4.9.0.80
+uvicorn==0.30.6
