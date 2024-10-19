@@ -7,4 +7,3 @@ ipywidgets
 matplotlib
 tqdm
 pytesseract
--e ./slvsh-tr
