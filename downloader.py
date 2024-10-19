@@ -28,7 +28,7 @@ def download_youtube_channel(channel_url, output_dir='./videos'):
 if __name__ == "__main__":
     # Set up argument parser
     parser = argparse.ArgumentParser(description='Download all videos from a YouTube channel, skipping previously downloaded ones.')
-    parser.add_argument('channel_url', type=str, help='URL of the YouTube channel to download')
+    parser.add_argument('channel_url', type=str, default='https://www.youtube.com/channel/UCwYNq_huF2CYE4WcFKKvmkg', help='URL of the YouTube channel to download')
     parser.add_argument('--output_dir', default='./videos', type=str, help='Output directory for downloaded videos')
 
     # Parse arguments
