@@ -1,18 +1,16 @@
 from difflib import SequenceMatcher
-import json
 from typing import Callable, TypeVar
 from tqdm import tqdm
 from pydantic import BaseModel
 from .recognizer import Recognizer
-from .example import Example
-import os
+from .example import load_examples
 import cv2
-
-example_file_path = os.path.join(
-    os.path.dirname(__file__), "assets", "examples.json")
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 class PrecisionAndRecall(BaseModel):
+    prediction: str
+    expected: str
     precision: float
     recall: float
     f1: float
@@ -46,11 +44,17 @@ def levenshtein_distance(prediction: str, expected: str) -> PrecisionAndRecall:
     precision = tp / (tp + fp) if (tp + fp) > 0 else 0
     recall = tp / (tp + fn) if (tp + fn) > 0 else 0
 
+    if len(exp_tokens) == 0:
+        recall = 1.0
+        precision = 1.0 if len(pred_tokens) == 0 else 0
+
     f1 = 0
     if (precision + recall) > 0:
         f1 = 2 * (precision * recall) / (precision + recall)
 
     return PrecisionAndRecall(
+        prediction=prediction,
+        expected=expected,
         precision=precision,
         recall=recall,
         f1=f1
@@ -62,13 +66,18 @@ T = TypeVar('T')
 
 def eval(
         model: Recognizer,
-        score_function: Callable[[str, str], T] = levenshtein_distance
+        score_function: Callable[[str, str], T] = levenshtein_distance,
+        n_examples: int = -1,
+        n_threads: int = None
 ) -> list[T]:
     examples = load_examples()
+    if n_examples != -1:
+        examples = examples[:n_examples]
 
     results = []
-    for example in tqdm(examples, desc="Evaluating examples"):
-        image = cv2.imread(example.image_path)
+
+    def process_example(example):
+        image = example.get_image()
 
         if image is None:
             raise RuntimeError(
@@ -79,20 +88,17 @@ def eval(
             raise RuntimeError(
                 f'The model failed to infer {example.image_path}', e)
 
-        result = score_function(prediction, example.expected)
+        return score_function(prediction, example.expected)
 
-        # Store the result
-        results.append(result)
+    with ThreadPoolExecutor(max_workers=n_threads) as executor:
+        futures = [executor.submit(process_example, example) for example in examples]
+        
+        for future in tqdm(as_completed(futures), total=len(examples), desc="Evaluating examples"):
+            try:
+                result = future.result()
+                results.append(result)
+            except Exception as e:
+                print(f"An error occurred: {str(e)}")
+
     return results
 
-
-def parse_example(obj) -> Example:
-    clone = {**obj}
-    clone["image_path"] = os.path.abspath(os.path.join(os.path.dirname(example_file_path), clone["image_path"]))
-
-    return Example(**clone)
-
-def load_examples() -> list[Example]:
-    with open(example_file_path) as f:
-        raw_examples = json.load(f)
-    return [parse_example(example) for example in raw_examples]
