@@ -9,10 +9,10 @@ def download_youtube_channel(channel_url, output_dir='./videos'):
         'outtmpl': f'{output_dir}/%(title)s/video.%(ext)s',
         'ignoreerrors': True,  # Continue on download errors
         'quiet': False,  # Show progress
-        'postprocessors': [{
-            'key': 'FFmpegVideoConvertor',
-            'preferedformat': 'mp4',  # Preferred video format
-        }],
+        # 'postprocessors': [{
+        #     'key': 'FFmpegVideoConvertor',
+        #     'preferedformat': 'mp4',  # Preferred video format
+        # }],
         'writeinfojson': True,
         'download_archive': os.path.join(output_dir, 'downloaded_videos.txt'),  # Keep track of downloaded videos
     }
@@ -28,7 +28,7 @@ def download_youtube_channel(channel_url, output_dir='./videos'):
 if __name__ == "__main__":
     # Set up argument parser
     parser = argparse.ArgumentParser(description='Download all videos from a YouTube channel, skipping previously downloaded ones.')
-    parser.add_argument('channel_url', type=str, default='https://www.youtube.com/channel/UCwYNq_huF2CYE4WcFKKvmkg', help='URL of the YouTube channel to download')
+    parser.add_argument('--channel_url', type=str, default='https://www.youtube.com/channel/UCwYNq_huF2CYE4WcFKKvmkg', help='URL of the YouTube channel to download')
     parser.add_argument('--output_dir', default='./videos', type=str, help='Output directory for downloaded videos')
 
     # Parse arguments

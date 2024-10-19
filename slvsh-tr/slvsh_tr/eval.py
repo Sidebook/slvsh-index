@@ -50,7 +50,11 @@ def levenshtein_distance(prediction: str, expected: str) -> PrecisionAndRecall:
     if (precision + recall) > 0:
         f1 = 2 * (precision * recall) / (precision + recall)
 
-    return precision, recall, f1
+    return PrecisionAndRecall(
+        precision=precision,
+        recall=recall,
+        f1=f1
+    )
 
 
 T = TypeVar('T')
@@ -60,9 +64,7 @@ def eval(
         model: Recognizer,
         score_function: Callable[[str, str], T] = levenshtein_distance
 ) -> list[T]:
-    with open(example_file_path) as f:
-        raw_examples = json.load(f)
-    examples: list[Example] = [Example(**example) for example in raw_examples]
+    examples = load_examples()
 
     results = []
     for example in tqdm(examples, desc="Evaluating examples"):
@@ -84,3 +86,13 @@ def eval(
     return results
 
 
+def parse_example(obj) -> Example:
+    clone = {**obj}
+    clone["image_path"] = os.path.abspath(os.path.join(os.path.dirname(example_file_path), clone["image_path"]))
+
+    return Example(**clone)
+
+def load_examples() -> list[Example]:
+    with open(example_file_path) as f:
+        raw_examples = json.load(f)
+    return [parse_example(example) for example in raw_examples]
