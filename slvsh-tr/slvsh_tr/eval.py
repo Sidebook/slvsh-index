@@ -3,24 +3,22 @@ from typing import Callable, TypeVar
 from tqdm import tqdm
 from pydantic import BaseModel
 from .recognizer import Recognizer
-from .example import load_examples
+from .example import load_examples, Example
 import cv2
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
-class PrecisionAndRecall(BaseModel):
-    prediction: str
-    expected: str
+class PrecisionRecallF1(BaseModel):
     precision: float
     recall: float
     f1: float
 
 
 def tokenize(s: str) -> list[str]:
-    return s.replace(',', ' ,').replace('.', ' .').split()
+    return s.replace(',', ' , ').replace('.', ' . ').split()
 
 
-def levenshtein_distance(prediction: str, expected: str) -> PrecisionAndRecall:
+def levenshtein_distance(prediction: str, expected: str) -> PrecisionRecallF1:
     pred_tokens = tokenize(prediction)
     exp_tokens = tokenize(expected)
 
@@ -52,24 +50,32 @@ def levenshtein_distance(prediction: str, expected: str) -> PrecisionAndRecall:
     if (precision + recall) > 0:
         f1 = 2 * (precision * recall) / (precision + recall)
 
-    return PrecisionAndRecall(
-        prediction=prediction,
-        expected=expected,
+    return PrecisionRecallF1(
         precision=precision,
         recall=recall,
         f1=f1
     )
 
 
-T = TypeVar('T')
+class EvaluationResult(BaseModel):
+    score: PrecisionRecallF1
+    example: Example
+    prediction: str
+
+    def dump(self) -> dict:
+        return {
+            **self.example.model_dump(),
+            **self.score.model_dump(),
+            "prediction": self.prediction
+        }
 
 
 def eval(
         model: Recognizer,
-        score_function: Callable[[str, str], T] = levenshtein_distance,
+        score_function: Callable[[str, str], PrecisionRecallF1] = levenshtein_distance,
         n_examples: int = -1,
         n_threads: int = None
-) -> list[T]:
+) -> list[EvaluationResult]:
     examples = load_examples()
     if n_examples != -1:
         examples = examples[:n_examples]
@@ -81,24 +87,25 @@ def eval(
 
         if image is None:
             raise RuntimeError(
-                f"Error: Could not load image {example.image_path}")
+                f"エラー: 画像 {example.image_path} を読み込めませんでした")
         try:
             prediction = model.infer(image)
         except Exception as e:
             raise RuntimeError(
-                f'The model failed to infer {example.image_path}', e)
+                f'モデルが {example.image_path} の推論に失敗しました', e)
 
-        return score_function(prediction, example.expected)
+        score = score_function(prediction, example.expected)
+        return EvaluationResult(score=score, example=example, prediction=prediction)
 
     with ThreadPoolExecutor(max_workers=n_threads) as executor:
         futures = [executor.submit(process_example, example) for example in examples]
         
-        for future in tqdm(as_completed(futures), total=len(examples), desc="Evaluating examples"):
+        for future in tqdm(as_completed(futures), total=len(examples), desc="例の評価中"):
             try:
                 result = future.result()
                 results.append(result)
             except Exception as e:
-                print(f"An error occurred: {str(e)}")
+                print(f"エラーが発生しました: {str(e)}")
 
     return results
 

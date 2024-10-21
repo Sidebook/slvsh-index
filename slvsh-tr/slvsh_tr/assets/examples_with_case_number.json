@@ -631,7 +631,7 @@
   },
   {
     "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0126.png",
-    "expected": "BIO 6 SAFETY",
+    "expected": "BIO 6 SAFETY.",
     "case_number": 127
   },
   {
