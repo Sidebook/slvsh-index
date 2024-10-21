@@ -9,6 +9,7 @@ example_file_path = os.path.join(
 class Example(BaseModel):
     image_path: str
     expected: str
+
     def get_image(self) -> cv2.typing.MatLike:
         return cv2.imread(self.image_path)
 

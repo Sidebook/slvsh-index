@@ -1,0 +1,892 @@
+[
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0000.png",
+    "expected": "REVENGE UN SW5 NOSE.",
+    "case_number": 1
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0001.png",
+    "expected": "BS, BSLIDE. SLIDE, SW. SWBT, B2. UN2, B2.",
+    "case_number": 2
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0002.png",
+    "expected": "2, SAFETY. F4, NOSEDRAG. B2, STALE",
+    "case_number": 3
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0003.png",
+    "expected": "SWLIP, SW. SWLIP, SW",
+    "case_number": 4
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0004.png",
+    "expected": "WALLRIDE, SW 3.",
+    "case_number": 5
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0005.png",
+    "expected": "",
+    "case_number": 6
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0006.png",
+    "expected": "",
+    "case_number": 7
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0007.png",
+    "expected": "B6. DISASTER TO FLAT",
+    "case_number": 8
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0008.png",
+    "expected": "NOLLIE. TAIL PRESS THROUGH DFD",
+    "case_number": 9
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0009.png",
+    "expected": "",
+    "case_number": 10
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0010.png",
+    "expected": "",
+    "case_number": 11
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0011.png",
+    "expected": "SWL5, LEAD TAIL. L9, LEAD SAFETY, TWEAK.",
+    "case_number": 12
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0012.png",
+    "expected": "SW2, B2, TAIL TAP.",
+    "case_number": 13
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0013.png",
+    "expected": "",
+    "case_number": 14
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0014.png",
+    "expected": "F4. B6. NOLLIE 1.",
+    "case_number": 15
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0015.png",
+    "expected": "B4, SAME NOSE.",
+    "case_number": 16
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0016.png",
+    "expected": "2, B2. BS, B2.",
+    "case_number": 17
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0017.png",
+    "expected": "B3S, SW. SW4.",
+    "case_number": 18
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0018.png",
+    "expected": "REVENGE FS 4",
+    "case_number": 19
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0019.png",
+    "expected": "B3S, 2.",
+    "case_number": 20
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0020.png",
+    "expected": "9, CORK.",
+    "case_number": 21
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0021.png",
+    "expected": "",
+    "case_number": 22
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0022.png",
+    "expected": "B3S, B4.",
+    "case_number": 23
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0023.png",
+    "expected": "SW TAILS 2, BS2. 2, FS2.",
+    "case_number": 24
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0024.png",
+    "expected": "FSURFACE.",
+    "case_number": 25
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0025.png",
+    "expected": "SW7, LEAD TAIL",
+    "case_number": 26
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0026.png",
+    "expected": "",
+    "case_number": 27
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0027.png",
+    "expected": "4, DISASTER, SW REVENGE",
+    "case_number": 28
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0028.png",
+    "expected": "SWTB1, PB7",
+    "case_number": 29
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0029.png",
+    "expected": "BACKSLIDE",
+    "case_number": 30
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0030.png",
+    "expected": "SW, CORK F4.",
+    "case_number": 31
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0031.png",
+    "expected": "2, B2. DISASTER. UN2, SW. SWUN 5, BLUNT. 9, BLUNT.",
+    "case_number": 32
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0032.png",
+    "expected": "GAP, 1. SW FLAT 3, JAPAN.",
+    "case_number": 33
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0033.png",
+    "expected": "B3S, B2.",
+    "case_number": 34
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0034.png",
+    "expected": "",
+    "case_number": 35
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0035.png",
+    "expected": "BS, F2.",
+    "case_number": 36
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0036.png",
+    "expected": "RODEO 5, NOSE.",
+    "case_number": 37
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0037.png",
+    "expected": "",
+    "case_number": 38
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0038.png",
+    "expected": "R2, FS, B2. BSURFACE, F2.",
+    "case_number": 39
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0039.png",
+    "expected": "",
+    "case_number": 40
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0040.png",
+    "expected": "1, SW5050. SW5050, 1.",
+    "case_number": 41
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0041.png",
+    "expected": "CORK 7, LIE KANG. 2. HIP. BS.",
+    "case_number": 42
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0042.png",
+    "expected": "CORK 3. CORK F4.",
+    "case_number": 43
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0043.png",
+    "expected": "9, NOSE TAP.",
+    "case_number": 44
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0044.png",
+    "expected": "SW7, BIO, SAFETY",
+    "case_number": 45
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0045.png",
+    "expected": "",
+    "case_number": 46
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0046.png",
+    "expected": "9, CUBAN",
+    "case_number": 47
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0047.png",
+    "expected": "",
+    "case_number": 48
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0048.png",
+    "expected": "",
+    "case_number": 49
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0049.png",
+    "expected": "",
+    "case_number": 50
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0050.png",
+    "expected": "UN SW9, MISTY",
+    "case_number": 51
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0051.png",
+    "expected": "",
+    "case_number": 52
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0052.png",
+    "expected": "R10, DUB",
+    "case_number": 53
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0053.png",
+    "expected": "2, B2.",
+    "case_number": 54
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0054.png",
+    "expected": "",
+    "case_number": 55
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0055.png",
+    "expected": "2. AIR. TAP. SIDE, NOLLIE, SW.",
+    "case_number": 56
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0056.png",
+    "expected": "BS, B2.",
+    "case_number": 57
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0057.png",
+    "expected": "NOSEBUTTER L7, LEAD MUTE",
+    "case_number": 58
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0058.png",
+    "expected": "1, TAIL TAP. SW LIP 2, TIPS DOWN",
+    "case_number": 59
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0059.png",
+    "expected": "",
+    "case_number": 60
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0060.png",
+    "expected": "",
+    "case_number": 61
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0061.png",
+    "expected": "RODEO 9, SAFETY TO LEAD STALE. REVENGE",
+    "case_number": 62
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0062.png",
+    "expected": "L BIO 7, TAIL",
+    "case_number": 63
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0063.png",
+    "expected": "2, FS, FWD. 5, SAFETY. SW 7, DUB NOSE.",
+    "case_number": 64
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0064.png",
+    "expected": "B2. 2 DISASTER, SW.",
+    "case_number": 65
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0065.png",
+    "expected": "SLIDE, GAP, 5050.",
+    "case_number": 66
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0066.png",
+    "expected": "BS, F2",
+    "case_number": 67
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0067.png",
+    "expected": "4 ON, DISASTER, BACKSLIDE",
+    "case_number": 68
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0068.png",
+    "expected": "NOLLIE, FS, B2. 2, ND. OW 2.",
+    "case_number": 69
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0069.png",
+    "expected": "B3S, FWD. FS, BS, F2. SW, B4.",
+    "case_number": 70
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0070.png",
+    "expected": "",
+    "case_number": 71
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0071.png",
+    "expected": "REVENGE OP CARVE, DUB 7.",
+    "case_number": 72
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0072.png",
+    "expected": "SW6, F2.",
+    "case_number": 73
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0073.png",
+    "expected": "1. SW9 MUTE.",
+    "case_number": 74
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0074.png",
+    "expected": "TT, BIO 5.",
+    "case_number": 75
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0075.png",
+    "expected": "LIP, F6. SWTAILS 2. SLIDE, SW.",
+    "case_number": 76
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0076.png",
+    "expected": "BIO 7 LEAD TAIL.",
+    "case_number": 77
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0077.png",
+    "expected": "CORK 3 LEAD SAFETY. LAND HOLDING W/CARVE.",
+    "case_number": 78
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0078.png",
+    "expected": "NB5",
+    "case_number": 79
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0079.png",
+    "expected": "",
+    "case_number": 80
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0080.png",
+    "expected": "REVENGE SW, BACKFLIP. SW5, CORK, BLUNT.",
+    "case_number": 81
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0081.png",
+    "expected": "SW7, MISTY, SAFETY. SWR5, DUBJAPAN. L9 RODEO, BLUNT",
+    "case_number": 82
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0082.png",
+    "expected": "R CORK 9, JAPAN",
+    "case_number": 83
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0083.png",
+    "expected": "SW LIP 2, TIPS DOWN, FORWARD",
+    "case_number": 84
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0084.png",
+    "expected": "PRE 1, CARVE, OTHER SW1. DUB NOSE. BLUNT, FLAG TAP",
+    "case_number": 85
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0085.png",
+    "expected": "SW5, TRUCK. 3, TRUCK. RODEO 7, TRUCK",
+    "case_number": 86
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0086.png",
+    "expected": "BRAUNI.",
+    "case_number": 87
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0087.png",
+    "expected": "DUB TAIL TAP, R1.",
+    "case_number": 88
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0088.png",
+    "expected": "LIP 4, FWD. OW LIP 4, SW.",
+    "case_number": 89
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0089.png",
+    "expected": "L9, LEAD TAIL",
+    "case_number": 90
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0090.png",
+    "expected": "",
+    "case_number": 91
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0091.png",
+    "expected": "PENCIL 7",
+    "case_number": 92
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0092.png",
+    "expected": "",
+    "case_number": 93
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0093.png",
+    "expected": "BACKFLIP. BS2. NOLLIE, BACKSLIDE, SW.",
+    "case_number": 94
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0094.png",
+    "expected": "BLENDER SW2, B2. 5050.",
+    "case_number": 95
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0095.png",
+    "expected": "2, BSLIDE. OW DIASTER 2, BSLIDE.",
+    "case_number": 96
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0096.png",
+    "expected": "",
+    "case_number": 97
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0097.png",
+    "expected": "",
+    "case_number": 98
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0098.png",
+    "expected": "PB5, OVER CLOSE",
+    "case_number": 99
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0099.png",
+    "expected": "SW5, NOSE TAP.",
+    "case_number": 100
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0100.png",
+    "expected": "",
+    "case_number": 101
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0101.png",
+    "expected": "",
+    "case_number": 102
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0102.png",
+    "expected": "",
+    "case_number": 103
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0103.png",
+    "expected": "BSURFACE, F2.",
+    "case_number": 104
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0104.png",
+    "expected": "CORK 5.",
+    "case_number": 105
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0105.png",
+    "expected": "BS, B2. NB2, B2. REVENGE",
+    "case_number": 106
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0106.png",
+    "expected": "",
+    "case_number": 107
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0107.png",
+    "expected": "BSLIDE, B2. 5050, SW5050. SW LIP, FWD. SLIDE, SW",
+    "case_number": 108
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0108.png",
+    "expected": "SW, F6. SW, SLIDE, FS, FC, SW",
+    "case_number": 109
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0109.png",
+    "expected": "SW5, B&A. B6.",
+    "case_number": 110
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0110.png",
+    "expected": "",
+    "case_number": 111
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0111.png",
+    "expected": "",
+    "case_number": 112
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0112.png",
+    "expected": "B2. SLIDE, SW 5050, 1. REVENGE",
+    "case_number": 113
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0113.png",
+    "expected": "TD, B2. B SURFACE. F4. F2. REVENGE",
+    "case_number": 114
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0114.png",
+    "expected": "2, B2. FS, FS, B4. SW2, F2.",
+    "case_number": 115
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0115.png",
+    "expected": "",
+    "case_number": 116
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0116.png",
+    "expected": "",
+    "case_number": 117
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0117.png",
+    "expected": "",
+    "case_number": 118
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0118.png",
+    "expected": "",
+    "case_number": 119
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0119.png",
+    "expected": "SW, FSLIDE. 1, SW 5050, 1.",
+    "case_number": 120
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0120.png",
+    "expected": "",
+    "case_number": 121
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0121.png",
+    "expected": "F4. 5, LEAD SEATBELT JAPAN. UN SW7, DUB JAPAN.",
+    "case_number": 122
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0122.png",
+    "expected": "",
+    "case_number": 123
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0123.png",
+    "expected": "TREE TAP",
+    "case_number": 124
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0124.png",
+    "expected": "SLIDE, GAP. 5050, SAFETY. FIRE CRACKER.",
+    "case_number": 125
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0125.png",
+    "expected": "CORK 4, SW/B2.",
+    "case_number": 126
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0126.png",
+    "expected": "BIO 6 SAFETY",
+    "case_number": 127
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0127.png",
+    "expected": "SWR TAILS 2. OW BSLIDE, B2.",
+    "case_number": 128
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0128.png",
+    "expected": "NB2, SW. SW, SW. REVENGE",
+    "case_number": 129
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0129.png",
+    "expected": "SW 1, 50 1. SW, F4.",
+    "case_number": 130
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0130.png",
+    "expected": "STALL, AO, TRANNY. LF, FORWARD. BSURFACE, B2. F2, SIDE.",
+    "case_number": 131
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0131.png",
+    "expected": "B4, TD BSLIDE.",
+    "case_number": 132
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0132.png",
+    "expected": "",
+    "case_number": 133
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0133.png",
+    "expected": "SWLIP2 DISASTER, HOLD SAFETY.",
+    "case_number": 134
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0134.png",
+    "expected": "",
+    "case_number": 135
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0135.png",
+    "expected": "FS.",
+    "case_number": 136
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0136.png",
+    "expected": "",
+    "case_number": 137
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0137.png",
+    "expected": "WALL, SAFETY. 2 SAFETY, LH.",
+    "case_number": 138
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0138.png",
+    "expected": "LIP 2. DISASTER, F2",
+    "case_number": 139
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0139.png",
+    "expected": "",
+    "case_number": 140
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0140.png",
+    "expected": "AO RODEO 9, LEAD UNCROSSED BLUNT.",
+    "case_number": 141
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0141.png",
+    "expected": "REVENGE TRANNY. TRANNY. LIP, B2",
+    "case_number": 142
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0142.png",
+    "expected": "",
+    "case_number": 143
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0143.png",
+    "expected": "SW, F4",
+    "case_number": 144
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0144.png",
+    "expected": "L2, FS, B2. R2, B2",
+    "case_number": 145
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0145.png",
+    "expected": "SWR LIP2, FWD. LIP2, B2. R LIP2, FWD.",
+    "case_number": 146
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0146.png",
+    "expected": "UN B4. SW2, BS, F2.",
+    "case_number": 147
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0147.png",
+    "expected": "BFURFACE. R4, F2.",
+    "case_number": 148
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0148.png",
+    "expected": "1, BLUNT.",
+    "case_number": 149
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0149.png",
+    "expected": "SW 2, F4",
+    "case_number": 150
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0150.png",
+    "expected": "AOR FLAT 5, TRAIL SAFETY",
+    "case_number": 151
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0151.png",
+    "expected": "JAPAN, DISASTER, 50.",
+    "case_number": 152
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0152.png",
+    "expected": "REVENGE F4.",
+    "case_number": 153
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0153.png",
+    "expected": "",
+    "case_number": 154
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0154.png",
+    "expected": "",
+    "case_number": 155
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0155.png",
+    "expected": "SWIVEL 3. TAIL PRESS",
+    "case_number": 156
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0156.png",
+    "expected": "6, UNDERFLIP, BLUNT. SWTAILS, SW",
+    "case_number": 157
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0157.png",
+    "expected": "SWLIP2. 4.",
+    "case_number": 158
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0158.png",
+    "expected": "B3S.",
+    "case_number": 159
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0159.png",
+    "expected": "",
+    "case_number": 160
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0160.png",
+    "expected": "SW R90, L270. STALL, 5.",
+    "case_number": 161
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0161.png",
+    "expected": "SW R90, TAIL TAP, L270. REVENGE",
+    "case_number": 162
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0162.png",
+    "expected": "LF, F4. 2, SW.",
+    "case_number": 163
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0163.png",
+    "expected": "",
+    "case_number": 164
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0164.png",
+    "expected": "UN 1, PRETZ 1.",
+    "case_number": 165
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0165.png",
+    "expected": "",
+    "case_number": 166
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0166.png",
+    "expected": "LIP TAP. TRANNY, 5050. 1, SW 3.",
+    "case_number": 167
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0167.png",
+    "expected": "2, SW.",
+    "case_number": 168
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0168.png",
+    "expected": "BACKFLIP, TRUCK",
+    "case_number": 169
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0169.png",
+    "expected": "AO CORK 7, BLUNT. RODEO630.",
+    "case_number": 170
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0170.png",
+    "expected": "UNDERFLIP DISASTER.",
+    "case_number": 171
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0171.png",
+    "expected": "9, DUB CORK",
+    "case_number": 172
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0172.png",
+    "expected": "2, DISASTER, FWD. FSLIDE TO BSLIDE, FWD",
+    "case_number": 173
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0173.png",
+    "expected": "FLAT/BIO 9, BLUNT. SW4.",
+    "case_number": 174
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0174.png",
+    "expected": "SUPERMAN FRONT. BCORK 810, BLUNT.",
+    "case_number": 175
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0175.png",
+    "expected": "SW3, NP, 1.",
+    "case_number": 176
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0176.png",
+    "expected": "LIP, BSLIDE, SW. SW4, F2. SW1.",
+    "case_number": 177
+  },
+  {
+    "image_path": "/workspaces/slvsh-index/slvsh-tr/slvsh_tr/assets/img/test_0177.png",
+    "expected": "R CORK 5, BLUNT.",
+    "case_number": 178
+  }
+]
