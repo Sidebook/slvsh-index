@@ -8,6 +8,9 @@ WORKDIR /app
 COPY ./requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
+COPY ./slvsh-tr ./slvsh-tr
+RUN pip install -e ./slvsh-tr
+
 # Copy the current directory contents into the container at /app
 COPY ./server.py /app/
 COPY ./slvsh_index.json /app/

@@ -9,10 +9,10 @@ def download_youtube_channel(channel_url, output_dir='./videos'):
         'outtmpl': f'{output_dir}/%(title)s/video.%(ext)s',
         'ignoreerrors': True,  # Continue on download errors
         'quiet': False,  # Show progress
-        # 'postprocessors': [{
-        #     'key': 'FFmpegVideoConvertor',
-        #     'preferedformat': 'mp4',  # Preferred video format
-        # }],
+        'postprocessors': [{
+            'key': 'FFmpegVideoConvertor',
+            'preferedformat': 'mp4',  # Preferred video format
+        }],
         'writeinfojson': True,
         'download_archive': os.path.join(output_dir, 'downloaded_videos.txt'),  # Keep track of downloaded videos
     }
