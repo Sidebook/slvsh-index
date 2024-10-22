@@ -125,42 +125,41 @@ class TesseractPreFindRectangleRecognizer(Recognizer):
 
     def infer(self, image: cv2.typing.MatLike, image_name: str) -> str:
         height, width = image.shape[:2]
-        roi = image[int(height * 0.87):int(height * 0.93), int(width * 0.035):int(width * 0.965)]
-        
-        original_roi = roi.copy()
-        roi = self.whiten_red_and_green(roi)
-        
-        text_region = self.find_text_region(roi)
-        config='--psm 7 -c tessedit_char_whitelist="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,. /"'
+        original_roi = image[int(height * 0.87):int(height * 0.93), int(width * 0.035):int(width * 0.965)]
+        whiten_roi = self.whiten_red_and_green(original_roi)    
+        text_region = self.find_text_region(whiten_roi)
 
         if text_region is None:
-            return ""
+            extracted_text = ""
+            if self.debug and self.debug_folder:
+                self._save_debug_image(original_roi, image_name, [], extracted_text)
         else:
             x, y, w, h = text_region
             target_image = original_roi[y:y+h, x:x+w]
 
-        extracted_text = pytesseract.image_to_string(target_image, config=config).strip()
-
-        if self.debug and self.debug_folder:
-            # 抽出されたテキストを含む画像を作成
-            text_image = np.zeros_like(roi)
-            cv2.putText(text_image, extracted_text, (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-             
-            # target_imageをroiと同じサイズにリサイズ
-            target_image_resized = cv2.resize(target_image, (roi.shape[1], roi.shape[0]))
-             
-            # 元画像に縦に積み重ねる
-            stacked_image = cv2.vconcat([
-                roi,
-                target_image_resized,
-                text_image
-            ])
+            config='--psm 7 -c tessedit_char_whitelist="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,. /"'
+            extracted_text = pytesseract.image_to_string(target_image, config=config).strip()
             
-            # 積み重ねた画像を保存
-            stacked_image_path = os.path.join(self.debug_folder, f"{image_name}_debug.png")
-            cv2.imwrite(stacked_image_path, stacked_image)
+            if self.debug and self.debug_folder:
+                self._save_debug_image(original_roi, image_name, [target_image], extracted_text)
+
 
         return extracted_text
+        
+    def _save_debug_image(self, original_image, original_image_name, intermediate_images, extracted_text):
+        # 抽出されたテキストを含む画像を作成
+        text_image = np.zeros_like(original_image)
+        cv2.putText(text_image, extracted_text, (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+        
+        # 全ての画像をoriginal_imageと同じサイズにリサイズ
+        resized_images = [original_image] + [cv2.resize(img, (original_image.shape[1], original_image.shape[0])) for img in intermediate_images] + [text_image]
+        
+        # 全ての画像を縦に積み重ねる
+        stacked_image = cv2.vconcat(resized_images)
+        
+        # 積み重ねた画像を保存
+        stacked_image_path = os.path.join(self.debug_folder, f"{original_image_name}_debug.png")
+        cv2.imwrite(stacked_image_path, stacked_image)
 
 
 def extract_text_from_video(video_path, interval_seconds=5, debug=False) -> list[FrameExtraction]:
