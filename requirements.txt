@@ -1,9 +1,9 @@
-yt-dlp==2024.8.6
+yt-dlp==2024.10.22
 fastapi==0.114.2
 opencv-python==4.10.0.84
 uvicorn==0.30.6
-ipykernel
-ipywidgets
+ipykernel==6.29.5
+ipywidgets==8.1.5
 matplotlib
 tqdm
 pytesseract
