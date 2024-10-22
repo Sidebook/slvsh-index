@@ -5,10 +5,12 @@ import argparse
 import numpy as np
 import os
 import json
-from dataclasses import dataclass
 
 from dataclasses import dataclass, asdict
+from abc import abstractmethod
+from typing import Callable
 import json
+
 
 VERSION = "0.0.1"
 
@@ -38,9 +40,134 @@ class VideoExtractions:
         data['extractions'] = [FrameExtraction(**e) for e in data['extractions']]
         return cls(**data)
 
+class Recognizer:
+    @abstractmethod
+    def infer(self, image: cv2.typing.MatLike) -> str:
+        pass
+
+    @staticmethod
+    def from_func(func: Callable[[str], str]) -> 'Recognizer':
+        return FunctionRecognizer(func)
+
+
+class FunctionRecognizer(Recognizer):
+    def __init__(self, func: Callable[[str], str]):
+        self.func = func
+
+    def infer(self, image: cv2.typing.MatLike) -> str:
+        return self.func(image)
+
+class TesseractPreFindRectangleRecognizer(Recognizer):
+    def __init__(self, debug: bool = False):
+        self.debug = debug
+        self.debug_folder = None
+
+    def set_debug_folder(self, folder: str):
+        self.debug_folder = folder
+
+    def whiten_red_and_green(self, image: cv2.typing.MatLike) -> cv2.typing.MatLike:
+        # BGRからHSV色空間に変換
+        hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+        
+        # 緑色の範囲を定義（HSV色空間）
+        lower_green = np.array([40, 40, 40])
+        upper_green = np.array([80, 255, 255])
+        
+        # 赤色の範囲を定義（HSV色空間）- 明るい赤のみ
+        lower_red2 = np.array([170, 100, 100])
+        upper_red2 = np.array([180, 255, 255])
+        
+        # マスクの作成
+        mask_green = cv2.inRange(hsv_image, lower_green, upper_green)
+        mask_red2 = cv2.inRange(hsv_image, lower_red2, upper_red2)
+        mask = cv2.bitwise_or(mask_green, mask_red2)
+        # 結果画像の作成
+        result = image.copy()
+        result[mask > 0] = [255, 255, 255]
+        
+        if self.debug and self.debug_folder:
+            result_path = os.path.join(self.debug_folder, "whiten_result.png")
+            cv2.imwrite(result_path, result)
+            
+            masked_image = cv2.bitwise_and(image, image, mask=mask)
+            masked_path = os.path.join(self.debug_folder, "masked_image.png")
+            cv2.imwrite(masked_path, masked_image)
+        
+        return result
+
+    def find_text_region(self, image: cv2.typing.MatLike) -> tuple:
+        height, width = image.shape[:2]
+        
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        _, binary = cv2.threshold(gray, 240, 255, cv2.THRESH_BINARY) #真っ白の四角を対象にする
+        
+        contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        if self.debug and self.debug_folder:
+            gray_path = os.path.join(self.debug_folder, "gray_image.png")
+            cv2.imwrite(gray_path, gray)
+            binary_path = os.path.join(self.debug_folder, "binary_image.png")
+            cv2.imwrite(binary_path, binary)
+        
+        text_regions = []
+        for contour in contours:
+            x, y, w, h = cv2.boundingRect(contour)
+            if w > width * 0.05 and h > height * 0.9:
+                # 右端または左端にアラインされているか確認
+                if x < width * 0.05 or x + w > width * 0.95:
+                    text_regions.append((x, y, w, h))
+        
+        if text_regions:
+            # 幅が最大のものを選択
+            return max(text_regions, key=lambda r: r[2])
+        
+        return None
+
+    def infer(self, image: cv2.typing.MatLike, image_name: str) -> str:
+        height, width = image.shape[:2]
+        roi = image[int(height * 0.87):int(height * 0.93), int(width * 0.035):int(width * 0.965)]
+        
+        original_roi = roi.copy()
+        roi = self.whiten_red_and_green(roi)
+        
+        text_region = self.find_text_region(roi)
+        config='--psm 7 -c tessedit_char_whitelist="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,. /"'
+
+        if text_region is None:
+            return ""
+        else:
+            x, y, w, h = text_region
+            target_image = original_roi[y:y+h, x:x+w]
+
+        extracted_text = pytesseract.image_to_string(target_image, config=config).strip()
+
+        if self.debug and self.debug_folder:
+            # 抽出されたテキストを含む画像を作成
+            text_image = np.zeros_like(roi)
+            cv2.putText(text_image, extracted_text, (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+             
+            # target_imageをroiと同じサイズにリサイズ
+            target_image_resized = cv2.resize(target_image, (roi.shape[1], roi.shape[0]))
+             
+            # 元画像に縦に積み重ねる
+            stacked_image = cv2.vconcat([
+                roi,
+                target_image_resized,
+                text_image
+            ])
+            
+            # 積み重ねた画像を保存
+            stacked_image_path = os.path.join(self.debug_folder, f"{image_name}_debug.png")
+            cv2.imwrite(stacked_image_path, stacked_image)
+
+        return extracted_text
+
 
 def extract_text_from_video(video_path, interval_seconds=5, debug=False) -> list[FrameExtraction]:
-    debug_folder = "./debug"
+    debug_folder = os.path.join(os.path.dirname(video_path), 'debug') if debug else None
+    if debug:
+        os.makedirs(debug_folder, exist_ok=True)
+    
     # Open the video file
     cap = cv2.VideoCapture(video_path)
 
@@ -57,18 +184,18 @@ def extract_text_from_video(video_path, interval_seconds=5, debug=False) -> list
     keep_frame_interval = 10
     extractions = []
 
+    recognizer = TesseractPreFindRectangleRecognizer(debug=debug)
+    if debug:
+        recognizer.set_debug_folder(debug_folder)
+
     while True:
         # Read the next frame
         ret, frame = cap.read()
-
         if not ret:
             break
 
-        height, width = frame.shape[:2]
-        roi = frame[int(height * 0.87):int(height * 0.93), :]
-
         if frame_count % keep_frame_interval == 0:
-            keep_frames.append(roi)
+            keep_frames.append(frame)
 
         if len(keep_frames) > keep_frame_num:
             keep_frames = keep_frames[1:]
@@ -83,15 +210,8 @@ def extract_text_from_video(video_path, interval_seconds=5, debug=False) -> list
             seconds = int(frame_count / fps % 60)
             timestamp_str = f"{minutes:02d}:{seconds:02d}"
 
-            # Convert ROI to grayscale
-            gray_frame = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
-
-            # Apply thresholding to make the text more prominent
-            _, thresh_image = cv2.threshold(roi, 150, 255, cv2.THRESH_BINARY_INV)
-
-            # Apply OCR to the cropped area
-            config='--psm 7 -c tessedit_char_whitelist="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,. "'
-            extracted_text = pytesseract.image_to_string(thresh_image, config=config).strip()
+            # TesseractPreFindRectangleRecognizerを使用してテキストを抽出
+            extracted_text = recognizer.infer(frame, timestamp_str).strip()
 
             extraction = FrameExtraction(
                 timestamp=frame_count / fps,
@@ -101,34 +221,7 @@ def extract_text_from_video(video_path, interval_seconds=5, debug=False) -> list
 
             extractions.append(extraction)
 
-            print(f"Time: {timestamp_str}, Extracted Text: {extracted_text}")
-
-            # If debug mode is enabled, store extracted_text in json file
-            if debug:
-
-                debug_folder = os.path.join(os.path.dirname(video_path), 'debug')
-                os.makedirs(debug_folder, exist_ok=True)
-                
-                # Create an image with detected text
-                text_image = np.zeros_like(gray_frame)
-
-                cv2.putText(text_image, extracted_text, (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-                
-                # Create an image with timestamp
-                timestamp_image = np.zeros_like(gray_frame)
-                cv2.putText(timestamp_image, timestamp_str, (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-                
-                # Stack the images vertically
-                stacked_image = cv2.vconcat([
-                    gray_frame,
-                    cv2.cvtColor(thresh_image, cv2.COLOR_BGR2GRAY),
-                    text_image,
-                    timestamp_image
-                ])
-                
-                # Save the stacked image
-                stacked_image_path = os.path.join(debug_folder, f"{timestamp_str}_debug.png")
-                cv2.imwrite(stacked_image_path, stacked_image)
+            print(f"時間: {timestamp_str}, 抽出されたテキスト: {extracted_text}")
 
             tokens = extracted_text.strip().split()
 
