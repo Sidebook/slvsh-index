@@ -18,13 +18,15 @@ export default function Home() {
       <div className="flex-1 basis-0">
         <ExampleRoller />
       </div>
-      <footer className="text-sm text-gray-100 p-4">
+      <footer className="text-gray-100 p-5">
         Made by{" "}
         <span>
           <a href="https://instagram.com/ryu_ski" target="_blank">
             @ryu_ski
           </a>
         </span>
+        <span className="mx-3">|</span>
+        <span>SLVSH INDEX is an unofficial website.</span>
       </footer>
     </div>
   );
