@@ -904,7 +904,7 @@
   },
   {
     "components": [
-      "GAP, SAFETY, SAFETY SLIDE, SW"
+      "GAP, SAFETY, SAFETY SLIDE"
     ],
     "start": 161.16099845807597,
     "end": 172.67249834793853,
@@ -1115,7 +1115,7 @@
   },
   {
     "components": [
-      ", E"
+      "5"
     ],
     "start": 568.8599528907085,
     "end": 575.5749944931284,
@@ -2130,7 +2130,7 @@
   },
   {
     "components": [
-      "CO TS"
+      "2"
     ],
     "start": 376.0423333333333,
     "end": 380.8387916666666,
@@ -9011,7 +9011,7 @@
   },
   {
     "components": [
-      "P LWO"
+      "NR"
     ],
     "start": 1256.6720833333331,
     "end": 1260.5092499999998,
@@ -13296,20 +13296,9 @@
       "CORK 7, BLUNT"
     ],
     "start": 518.0174999999999,
-    "end": 537.2033333333333,
-    "title": "Game 1 || Jesper Tjader vs. Emil Granbom || SLVSH CUP GRANDVALIRA '19",
-    "url": "https://www.youtube.com/watch?v=S2tfpHLpnyk&t=518",
-    "video_id": "S2tfpHLpnyk",
-    "upload_date": "20190328"
-  },
-  {
-    "components": [
-      "OE"
-    ],
-    "start": 539.1219166666666,
     "end": 542.9590833333333,
     "title": "Game 1 || Jesper Tjader vs. Emil Granbom || SLVSH CUP GRANDVALIRA '19",
-    "url": "https://www.youtube.com/watch?v=S2tfpHLpnyk&t=539",
+    "url": "https://www.youtube.com/watch?v=S2tfpHLpnyk&t=518",
     "video_id": "S2tfpHLpnyk",
     "upload_date": "20190328"
   },
@@ -15239,7 +15228,8 @@
   },
   {
     "components": [
-      "SWLIP, BS, B2"
+      "SWLIP",
+      "BS, B2"
     ],
     "start": 490.5901,
     "end": 501.23406666666665,
@@ -17891,7 +17881,7 @@
   },
   {
     "components": [
-      "4 FS, B2"
+      "4, FS, B2"
     ],
     "start": 1189.5216666666665,
     "end": 1212.5446666666667,
@@ -18434,7 +18424,7 @@
   },
   {
     "components": [
-      "FO"
+      "F9"
     ],
     "start": 470.05291666666665,
     "end": 492.11662499999994,
@@ -18514,7 +18504,7 @@
   },
   {
     "components": [
-      "SW5 JAPAN"
+      "SWS5 JAPAN"
     ],
     "start": 46.446400000000004,
     "end": 59.02563333333333,
@@ -24298,8 +24288,7 @@
   },
   {
     "components": [
-      "SS",
-      ""
+      "A"
     ],
     "start": 790.4563333333333,
     "end": 796.2120833333332,
@@ -25973,7 +25962,8 @@
   },
   {
     "components": [
-      ", 7"
+      "",
+      "L 7XK"
     ],
     "start": 973.6810416666666,
     "end": 977.5182083333333,
@@ -27652,8 +27642,7 @@
   },
   {
     "components": [
-      "SWRS",
-      "NOSE"
+      "SWRS, NOSE"
     ],
     "start": 75.78404166666667,
     "end": 85.37695833333332,
@@ -27858,9 +27847,7 @@
   },
   {
     "components": [
-      "SWR LIP, F4",
-      "BS, FORWARD",
-      "LF, B4"
+      "SWR LIP, F4"
     ],
     "start": 410.5768333333333,
     "end": 421.12904166666664,
@@ -30917,7 +30904,7 @@
   {
     "components": [
       "5050",
-      "LAZYBOY 5, TAIL TAP"
+      "LAZYBOY 5S, TAIL TAP"
     ],
     "start": 150.60879166666666,
     "end": 168.83533333333332,
@@ -32950,7 +32937,7 @@
   },
   {
     "components": [
-      "NBO, TAIL"
+      "NB9, TAIL"
     ],
     "start": 264.7644983046502,
     "end": 277.2352898914634,
@@ -34020,7 +34007,7 @@
   },
   {
     "components": [
-      "50,3 OUT"
+      "50, 3 OUT"
     ],
     "start": 141.97516466464347,
     "end": 160.20170607429364,
@@ -34583,7 +34570,7 @@
   },
   {
     "components": [
-      "FS B4"
+      "FS, B4"
     ],
     "start": 292.5839583333333,
     "end": 299.299,
@@ -37806,6 +37793,215 @@
   },
   {
     "components": [
+      "UNLIP, FWD",
+      "BFLIP AUCLAIR",
+      "3 AUCLAIR",
+      "BFLIP AUCLAIR"
+    ],
+    "start": 62.896166666666666,
+    "end": 106.43966666666667,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=62",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "FSLIDE, SW",
+      "SWBLENDER FLAT 3 AUCLAIR"
+    ],
+    "start": 117.08363333333334,
+    "end": 150.95080000000002,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=117",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "2, B2",
+      "UNLIP, NP, FWD"
+    ],
+    "start": 162.5624,
+    "end": 183.85033333333334,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=162",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "BSLIDE, B2",
+      "R RODEOS JAPAN",
+      "SW5 AUCLAIR",
+      "BIO 10"
+    ],
+    "start": 192.55903333333333,
+    "end": 247.71413333333334,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=192",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "RODEOS LEAD SAFETY",
+      "SWLIP, FSLIDE, FWD",
+      "MISTY5",
+      "SW7"
+    ],
+    "start": 260.29336666666666,
+    "end": 293.1929,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=260",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "SW5 JAPAN",
+      "10 TINDY"
+    ],
+    "start": 301.90160000000003,
+    "end": 328.0277,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=301",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "R1 AUCLAIR",
+      "SWLIP, FWD",
+      "RODEO 5 BLUNT"
+    ],
+    "start": 335.7687666666667,
+    "end": 369.63593333333336,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=335",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "2, FWD",
+      "R LIP 2, F2"
+    ],
+    "start": 379.3122666666667,
+    "end": 407.3736333333333,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=379",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "SWTBS",
+      "UNLIP, BSLIDE, SW",
+      "SW CORK 3 SAFETY"
+    ],
+    "start": 421.8881333333333,
+    "end": 464.464,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=421",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "2, SW"
+    ],
+    "start": 468.33453333333335,
+    "end": 491.5577333333333,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=468",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "NB 7",
+      "2, BSLIDE, SW"
+    ],
+    "start": 496.3959,
+    "end": 523.4896333333334,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=496",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "FRONT FULL"
+    ],
+    "start": 529.2954333333333,
+    "end": 556.3891666666667,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=529",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "FFLIP",
+      "FSLIDE, B2",
+      "UNDERFLIP JAPAN"
+    ],
+    "start": 566.0655,
+    "end": 606.7061,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=566",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "UN FS, B4"
+    ],
+    "start": 610.5766333333333,
+    "end": 628.9616666666667,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=610",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "FS, B2"
+    ],
+    "start": 631.8645666666666,
+    "end": 647.3467,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=631",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "FLAIR BLUNT",
+      "FLAT 3"
+    ],
+    "start": 658.9583,
+    "end": 690.8902,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=658",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
+      "SW FFLIP",
+      "R RODEO 9"
+    ],
+    "start": 699.5989,
+    "end": 763.4627,
+    "title": "SLVSH || Cody Laplante & Henry Robarge vs. Cody Wilder Ray & Walker Woodring || '23 JP Memorial",
+    "url": "https://www.youtube.com/watch?v=l8zcVs2wCK0&t=699",
+    "video_id": "l8zcVs2wCK0",
+    "upload_date": "20241029"
+  },
+  {
+    "components": [
       "5050",
       "MISTYS SAFETY",
       "SW5 JAPAN"
@@ -38324,6 +38520,281 @@
     "url": "https://www.youtube.com/watch?v=wUtJ1-kVOr8&t=984",
     "video_id": "wUtJ1-kVOr8",
     "upload_date": "20211130"
+  },
+  {
+    "components": [
+      "UN 1, 3",
+      "SW, F4 NOSE DRAG"
+    ],
+    "start": 29.996633333333335,
+    "end": 59.02563333333333,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=29",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "SW2, F2",
+      "SLIDE",
+      "LIP D",
+      "FLAIR 7 JAPAN"
+    ],
+    "start": 74.50776666666667,
+    "end": 119.98653333333334,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=74",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "NB7 SHIFTY",
+      "UNS LEAD MUTE",
+      "SWTB 7 LEAD MUTE"
+    ],
+    "start": 135.46866666666668,
+    "end": 179.9798,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=135",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "UN 2, FS, B2"
+    ],
+    "start": 183.85033333333334,
+    "end": 201.26773333333333,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=183",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "SWLIP 2 DISASTER, SW",
+      "SW 1"
+    ],
+    "start": 209.97643333333335,
+    "end": 235.13490000000002,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=209",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "1, P1",
+      "UN B3S, FWD",
+      "SLIDE"
+    ],
+    "start": 245.77886666666666,
+    "end": 271.90496666666667,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=245",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "BSLIDE, B2"
+    ],
+    "start": 284.4842,
+    "end": 301.90160000000003,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=284",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "AO RODEO 5 BLUNT"
+    ],
+    "start": 307.7074,
+    "end": 328.99533333333335,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=307",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "UN NB7",
+      "NB9 LEAD SAFETY",
+      "SWTB TO NBS"
+    ],
+    "start": 340.60693333333336,
+    "end": 377.377,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=340",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "UN BSLIDE, B2",
+      "LIP 4 D, SW",
+      "SW CORK 5"
+    ],
+    "start": 388.9886,
+    "end": 420.9205,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=388",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "FFLIP",
+      "SIDE FLIP",
+      "UN NB9 JAPAN"
+    ],
+    "start": 428.66156666666666,
+    "end": 459.62583333333333,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=428",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "NB4, F2"
+    ],
+    "start": 465.43163333333337,
+    "end": 502.2017,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=465",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "AO RODEO 7 TWEAK MUTE"
+    ],
+    "start": 509.94276666666667,
+    "end": 534.1336,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=509",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "PRE POP, 1",
+      "SWBLEND 1 TWEAK MUTE",
+      "BIO7 LEAD BLUNT"
+    ],
+    "start": 544.7775666666666,
+    "end": 574.7742000000001,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=544",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "BONE AIRSW OVEREFLIP"
+    ],
+    "start": 582.5152666666667,
+    "end": 601.8679333333333,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=582",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "CORK B8"
+    ],
+    "start": 605.7384666666667,
+    "end": 617.3500666666666,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=605",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "LIP 2, B2"
+    ],
+    "start": 622.1882333333333,
+    "end": 642.5085333333334,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=622",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "SWTAILS 4 DISASTER, SW"
+    ],
+    "start": 647.3467,
+    "end": 693.7931,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=647",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "5050, UN 3",
+      "NBS, ND 1"
+    ],
+    "start": 707.3399666666667,
+    "end": 758.6245333333334,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=707",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "NO LOOK ZERO",
+      "SW7 DUBNOSE",
+      "OW SW7 DUB NOSE"
+    ],
+    "start": 768.3008666666667,
+    "end": 810.8767333333334,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=768",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "UN FLAIR 7 SAFETY"
+    ],
+    "start": 816.6825333333334,
+    "end": 831.1970333333334,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=816",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "BFLIP",
+      "UN RODEO 5 MUTE",
+      "SWBIO 7 SAFETY"
+    ],
+    "start": 837.9704666666667,
+    "end": 873.7729,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=837",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
+  },
+  {
+    "components": [
+      "SWLIP 2, F4"
+    ],
+    "start": 877.6434333333334,
+    "end": 906.6724333333334,
+    "title": "SLVSH || Colby Stevenson vs. Ferdinand Dahl at Woodward Copper",
+    "url": "https://www.youtube.com/watch?v=MmOyIM1l3ww&t=877",
+    "video_id": "MmOyIM1l3ww",
+    "upload_date": "20241105"
   },
   {
     "components": [
@@ -39020,7 +39491,7 @@
   },
   {
     "components": [
-      "FRONTFLIP"
+      "FRONTELIP"
     ],
     "start": 443.19275,
     "end": 460.46,
@@ -43539,7 +44010,7 @@
   },
   {
     "components": [
-      "LS, TAIL"
+      "L5, TAIL"
     ],
     "start": 332.8742046972099,
     "end": 343.42641291527707,
@@ -45541,7 +46012,7 @@
   },
   {
     "components": [
-      "J"
+      "2, F4"
     ],
     "start": 269.0023356690023,
     "end": 272.8728728728729,
@@ -46080,7 +46551,8 @@
   },
   {
     "components": [
-      "FS SWAP, BS SWAP, FS 2"
+      "FS SWAP, BS SWAP",
+      "FS 2"
     ],
     "start": 291.62466666666666,
     "end": 300.25829166666665,
@@ -48959,9 +49431,7 @@
   },
   {
     "components": [
-      "SIDE HIT",
-      "FS SWAP",
-      "SW"
+      "SIDE HIT, FS SWAP, SW"
     ],
     "start": 327.1184583333333,
     "end": 333.83349999999996,
@@ -50025,9 +50495,7 @@
   },
   {
     "components": [
-      "LF",
-      "FS",
-      "F2"
+      "LF, FS, F2"
     ],
     "start": 268.6016636697008,
     "end": 275.31670526144336,
@@ -50892,7 +51360,7 @@
   },
   {
     "components": [
-      "2,SW"
+      "2, SW"
     ],
     "start": 94.01058221467851,
     "end": 98.80704049093761,
@@ -51117,8 +51585,7 @@
   },
   {
     "components": [
-      "FS SWAP",
-      "FS4"
+      "FS SWAP, FS4"
     ],
     "start": 349.182162511663,
     "end": 354.93791244317396,
@@ -51129,7 +51596,8 @@
   },
   {
     "components": [
-      "FS SWAP, BS4"
+      "FS SWAP",
+      "BS4"
     ],
     "start": 356.85649575367756,
     "end": 364.53082899569216,
@@ -54940,23 +55408,12 @@
   },
   {
     "components": [
-      "L LIP L50"
-    ],
-    "start": 81.53979166666666,
-    "end": 87.29554166666667,
-    "title": "SLVSH || LSM vs. Will Wesson",
-    "url": "https://www.youtube.com/watch?v=Tb97JtOK-a4&t=81",
-    "video_id": "Tb97JtOK-a4",
-    "upload_date": "20190611"
-  },
-  {
-    "components": [
       "L LIP L5O"
     ],
-    "start": 89.214125,
+    "start": 81.53979166666666,
     "end": 95.92916666666666,
     "title": "SLVSH || LSM vs. Will Wesson",
-    "url": "https://www.youtube.com/watch?v=Tb97JtOK-a4&t=89",
+    "url": "https://www.youtube.com/watch?v=Tb97JtOK-a4&t=81",
     "video_id": "Tb97JtOK-a4",
     "upload_date": "20190611"
   },
@@ -57783,7 +58240,8 @@
   },
   {
     "components": [
-      "SWRS, NOSE"
+      "SWRS",
+      "NOSE"
     ],
     "start": 73.86545833333332,
     "end": 84.41766666666666,
@@ -58719,7 +59177,7 @@
   },
   {
     "components": [
-      "SWS, BSA",
+      "SW5, BSA",
       "B6"
     ],
     "start": 132.38225,
@@ -59436,7 +59894,7 @@
   },
   {
     "components": [
-      "DUB HD, L5"
+      "DUB HD, LS"
     ],
     "start": 173.63179166666666,
     "end": 180.3468333333333,
@@ -59473,7 +59931,7 @@
   {
     "components": [
       "1",
-      "SWLS5, JAPAN",
+      "SWLS, JAPAN",
       "R RODEO 7, SAFETY"
     ],
     "start": 235.98575,
@@ -59486,7 +59944,7 @@
   {
     "components": [
       "1",
-      "SWLS5, JAPAN",
+      "SWLS, JAPAN",
       "R RODEO 7, SAFETY"
     ],
     "start": 245.57866666666666,
@@ -59657,7 +60115,8 @@
   },
   {
     "components": [
-      "FS SWAP, BS6"
+      "FS SWAP",
+      "BS6"
     ],
     "start": 190.89904166666665,
     "end": 198.573375,
@@ -60571,7 +61030,8 @@
   },
   {
     "components": [
-      "FS SWAP, BS 4"
+      "FS SWAP",
+      "BS 4"
     ],
     "start": 145.81233333333333,
     "end": 162.12029166666665,
@@ -63946,7 +64406,7 @@
   },
   {
     "components": [
-      "SWL5, SCREAMIN"
+      "SWLS, SCREAMIN"
     ],
     "start": 296.42112499999996,
     "end": 317.52554166666664,
@@ -64147,7 +64607,8 @@
   },
   {
     "components": [
-      "FS, FS, B2"
+      "FS",
+      "FS, B2"
     ],
     "start": 287.78749397842705,
     "end": 294.50253550459036,
@@ -65444,7 +65905,8 @@
   },
   {
     "components": [
-      "F4, MIDDLE OF Y"
+      "F4",
+      "MIDDLE OF Y"
     ],
     "start": 68.86957018514066,
     "end": 75.56522284202933,
@@ -66841,7 +67303,7 @@
   },
   {
     "components": [
-      "2,B4"
+      "2, B4"
     ],
     "start": 220.63708333333332,
     "end": 231.18929166666666,
@@ -67808,8 +68270,7 @@
   },
   {
     "components": [
-      "SW",
-      "BS 4 SAFETY"
+      "SW, BS 4 SAFETY"
     ],
     "start": 282.03175,
     "end": 303.13616666666667,
@@ -70562,7 +71023,7 @@
   },
   {
     "components": [
-      "1,1"
+      "TT"
     ],
     "start": 499.7909583333333,
     "end": 507.46529166666664,
@@ -70804,7 +71265,7 @@
   },
   {
     "components": [
-      "HESS WULTERMAR"
+      "PE OO"
     ],
     "start": 772.2297916666666,
     "end": 778.9448333333332,
