@@ -2,7 +2,10 @@ import yt_dlp
 import argparse
 import os
 
-def download_youtube_channel(channel_url, output_dir='./videos'):
+
+SLVSH_CHANNEL_URL = 'https://www.youtube.com/channel/UCwYNq_huF2CYE4WcFKKvmkg'
+
+def download_youtube_channel(channel_url=SLVSH_CHANNEL_URL, output_dir='./videos'):
     # Set up yt-dlp options
     ydl_opts = {
         'format': 'best',
@@ -14,7 +17,8 @@ def download_youtube_channel(channel_url, output_dir='./videos'):
             'preferedformat': 'mp4',  # Preferred video format
         }],
         'writeinfojson': True,
-        'download_archive': os.path.join(output_dir, 'downloaded_videos.txt'),  # Keep track of downloaded videos
+        # Keep track of downloaded videos
+        'download_archive': os.path.join(output_dir, 'downloaded_videos.txt'),
     }
 
     try:
@@ -27,9 +31,12 @@ def download_youtube_channel(channel_url, output_dir='./videos'):
 
 if __name__ == "__main__":
     # Set up argument parser
-    parser = argparse.ArgumentParser(description='Download all videos from a YouTube channel, skipping previously downloaded ones.')
-    parser.add_argument('--channel_url', type=str, default='https://www.youtube.com/channel/UCwYNq_huF2CYE4WcFKKvmkg', help='URL of the YouTube channel to download')
-    parser.add_argument('--output_dir', default='./videos', type=str, help='Output directory for downloaded videos')
+    parser = argparse.ArgumentParser(
+        description='Download all videos from a YouTube channel, skipping previously downloaded ones.')
+    parser.add_argument('--channel_url', type=str, default=SLVSH_CHANNEL_URL,
+                        help='URL of the YouTube channel to download')
+    parser.add_argument('--output_dir', default='./videos',
+                        type=str, help='Output directory for downloaded videos')
 
     # Parse arguments
     args = parser.parse_args()
