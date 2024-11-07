@@ -25,6 +25,12 @@ export default function Home() {
             @ryu_ski
           </a>
         </span>
+        {"  "}
+        <span>
+          <a href="https://instagram.com/yuitaso_ski" target="_blank">
+            @yuitaso_ski
+          </a>
+        </span>
         <span className="mx-3">|</span>
         <span>SLVSH INDEX is an unofficial website.</span>
       </footer>
