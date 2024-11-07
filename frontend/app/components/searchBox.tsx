@@ -38,6 +38,7 @@ const SearchBoxInner: React.FC<Props> = ({ className }) => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        setShowSuggestions(false);
         router.push(`/search?what=${what}&who=${who}`);
       }}
       className={`flex flex-col sm:flex-row gap-4 ${className}`}

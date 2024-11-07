@@ -150,9 +150,13 @@ const SearchPageInner: React.FC = () => {
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-300"></div>
         </div>
       )}
-      {totalCount !== undefined && totalCount > 100 && !hasMore && (
+      {totalCount !== undefined && totalCount > 0 && !hasMore && (
         <div className="text-center p-4">
           <p className="text-gray-300">—— End of results ——</p>
+          <p className="text-gray-300 mt-5 text-sm">
+            It is a <u>beta</u> website, there may be some tricks that are not
+            indexed or wrongly indexed.
+          </p>
         </div>
       )}
     </div>
