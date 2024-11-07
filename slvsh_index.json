@@ -2130,7 +2130,7 @@
   },
   {
     "components": [
-      "2"
+      "WW"
     ],
     "start": 376.0423333333333,
     "end": 380.8387916666666,
@@ -13296,9 +13296,20 @@
       "CORK 7, BLUNT"
     ],
     "start": 518.0174999999999,
-    "end": 542.9590833333333,
+    "end": 537.2033333333333,
     "title": "Game 1 || Jesper Tjader vs. Emil Granbom || SLVSH CUP GRANDVALIRA '19",
     "url": "https://www.youtube.com/watch?v=S2tfpHLpnyk&t=518",
+    "video_id": "S2tfpHLpnyk",
+    "upload_date": "20190328"
+  },
+  {
+    "components": [
+      "OE"
+    ],
+    "start": 539.1219166666666,
+    "end": 542.9590833333333,
+    "title": "Game 1 || Jesper Tjader vs. Emil Granbom || SLVSH CUP GRANDVALIRA '19",
+    "url": "https://www.youtube.com/watch?v=S2tfpHLpnyk&t=539",
     "video_id": "S2tfpHLpnyk",
     "upload_date": "20190328"
   },
@@ -15501,7 +15512,7 @@
   },
   {
     "components": [
-      "C LWOERMAN"
+      "YH"
     ],
     "start": 431.68125,
     "end": 440.314875,
@@ -17296,7 +17307,8 @@
   },
   {
     "components": [
-      "HOP, B2"
+      "HOP",
+      "B2"
     ],
     "start": 671.5382048715383,
     "end": 683.1498164831498,
@@ -17881,7 +17893,7 @@
   },
   {
     "components": [
-      "4, FS, B2"
+      "4 FS, B2"
     ],
     "start": 1189.5216666666665,
     "end": 1212.5446666666667,
@@ -23540,7 +23552,7 @@
   {
     "components": [
       "AO FLAIR",
-      "NB 5"
+      "NB S"
     ],
     "start": 520.895375,
     "end": 537.2033333333333,
@@ -24288,7 +24300,7 @@
   },
   {
     "components": [
-      "A"
+      "SO"
     ],
     "start": 790.4563333333333,
     "end": 796.2120833333332,
@@ -25962,8 +25974,7 @@
   },
   {
     "components": [
-      "",
-      "L 7XK"
+      "W"
     ],
     "start": 973.6810416666666,
     "end": 977.5182083333333,
@@ -26862,7 +26873,8 @@
   },
   {
     "components": [
-      "2, SW"
+      "2, SW",
+      "SW2, MISTY 4"
     ],
     "start": 194.7362048522263,
     "end": 212.96274619307508,
@@ -26984,7 +26996,8 @@
   },
   {
     "components": [
-      "BS, F2"
+      "BS",
+      "F2"
     ],
     "start": 369.32728506456715,
     "end": 376.0423266111956,
@@ -27642,7 +27655,8 @@
   },
   {
     "components": [
-      "SWRS, NOSE"
+      "SWRS",
+      "NOSE"
     ],
     "start": 75.78404166666667,
     "end": 85.37695833333332,
@@ -27847,7 +27861,9 @@
   },
   {
     "components": [
-      "SWR LIP, F4"
+      "SWR LIP, F4",
+      "BS, FORWARD",
+      "LF, B4"
     ],
     "start": 410.5768333333333,
     "end": 421.12904166666664,
@@ -30904,7 +30920,7 @@
   {
     "components": [
       "5050",
-      "LAZYBOY 5S, TAIL TAP"
+      "LAZYBOY 5, TAIL TAP"
     ],
     "start": 150.60879166666666,
     "end": 168.83533333333332,
@@ -32798,7 +32814,7 @@
   },
   {
     "components": [
-      "FRONTFLIP"
+      "50/5050, 1 OUT"
     ],
     "start": 128.54508333333334,
     "end": 142.9344583333333,
@@ -32937,7 +32953,7 @@
   },
   {
     "components": [
-      "NB9, TAIL"
+      "NBO, TAIL"
     ],
     "start": 264.7644983046502,
     "end": 277.2352898914634,
@@ -34007,7 +34023,7 @@
   },
   {
     "components": [
-      "50, 3 OUT"
+      "50,3 OUT"
     ],
     "start": 141.97516466464347,
     "end": 160.20170607429364,
@@ -34570,7 +34586,7 @@
   },
   {
     "components": [
-      "FS, B4"
+      "FS B4"
     ],
     "start": 292.5839583333333,
     "end": 299.299,
@@ -36513,12 +36529,23 @@
   },
   {
     "components": [
-      "SW3"
+      "NB7"
     ],
     "start": 288.74679166666664,
-    "end": 324.2405833333333,
+    "end": 316.56624999999997,
     "title": "SLVSH || Blake Wilson vs. Cody Perin",
     "url": "https://www.youtube.com/watch?v=y8ULo-tRsM0&t=288",
+    "video_id": "y8ULo-tRsM0",
+    "upload_date": "20171113"
+  },
+  {
+    "components": [
+      "SW3"
+    ],
+    "start": 318.4848333333333,
+    "end": 324.2405833333333,
+    "title": "SLVSH || Blake Wilson vs. Cody Perin",
+    "url": "https://www.youtube.com/watch?v=y8ULo-tRsM0&t=318",
     "video_id": "y8ULo-tRsM0",
     "upload_date": "20171113"
   },
@@ -37847,7 +37874,7 @@
     "components": [
       "RODEOS LEAD SAFETY",
       "SWLIP, FSLIDE, FWD",
-      "MISTY5",
+      "MISTYS",
       "SW7"
     ],
     "start": 260.29336666666666,
@@ -39491,7 +39518,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 443.19275,
     "end": 460.46,
@@ -44010,7 +44037,7 @@
   },
   {
     "components": [
-      "L5, TAIL"
+      "LS, TAIL"
     ],
     "start": 332.8742046972099,
     "end": 343.42641291527707,
@@ -46012,7 +46039,7 @@
   },
   {
     "components": [
-      "2, F4"
+      ""
     ],
     "start": 269.0023356690023,
     "end": 272.8728728728729,
@@ -46058,7 +46085,7 @@
   },
   {
     "components": [
-      "FS, FWD",
+      "FS FWD",
       "BSLIDE, SW"
     ],
     "start": 376.40974307640977,
@@ -46551,8 +46578,7 @@
   },
   {
     "components": [
-      "FS SWAP, BS SWAP",
-      "FS 2"
+      "FS SWAP, BS SWAP, FS 2"
     ],
     "start": 291.62466666666666,
     "end": 300.25829166666665,
@@ -47218,8 +47244,8 @@
   {
     "components": [
       "BACKFLIP",
-      "R5, OPP MUTE",
-      "SWS, OVERSHIFTY",
+      "RS, OPP MUTE",
+      "SW5, OVERSHIFTY",
       "NB3, WALLIE 1"
     ],
     "start": 316.56624999999997,
@@ -49119,6 +49145,7 @@
   },
   {
     "components": [
+      "R2, B2",
       "L2, NOLLIE, SW"
     ],
     "start": 243.66008333333332,
@@ -49431,7 +49458,9 @@
   },
   {
     "components": [
-      "SIDE HIT, FS SWAP, SW"
+      "SIDE HIT",
+      "FS SWAP",
+      "SW"
     ],
     "start": 327.1184583333333,
     "end": 333.83349999999996,
@@ -50015,7 +50044,8 @@
   },
   {
     "components": [
-      "SW MISTY 5, SAFETY"
+      "SW MISTY 5",
+      "SAFETY"
     ],
     "start": 94.01058333333333,
     "end": 102.64420833333332,
@@ -50495,7 +50525,9 @@
   },
   {
     "components": [
-      "LF, FS, F2"
+      "LF",
+      "FS",
+      "F2"
     ],
     "start": 268.6016636697008,
     "end": 275.31670526144336,
@@ -50650,8 +50682,7 @@
   },
   {
     "components": [
-      "RF",
-      "FS, B2"
+      "RF, FS, B2"
     ],
     "start": 435.51841180730065,
     "end": 440.31487008711673,
@@ -51360,7 +51391,7 @@
   },
   {
     "components": [
-      "2, SW"
+      "2,SW"
     ],
     "start": 94.01058221467851,
     "end": 98.80704049093761,
@@ -51585,24 +51616,13 @@
   },
   {
     "components": [
-      "FS SWAP, FS4"
+      "FS SWAP",
+      "FS4"
     ],
     "start": 349.182162511663,
-    "end": 354.93791244317396,
-    "title": "SLVSH || Kai Mahler vs. Till Matti",
-    "url": "https://www.youtube.com/watch?v=s4dePW9Zs6k&t=349",
-    "video_id": "s4dePW9Zs6k",
-    "upload_date": "20161004"
-  },
-  {
-    "components": [
-      "FS SWAP",
-      "BS4"
-    ],
-    "start": 356.85649575367756,
     "end": 364.53082899569216,
     "title": "SLVSH || Kai Mahler vs. Till Matti",
-    "url": "https://www.youtube.com/watch?v=s4dePW9Zs6k&t=356",
+    "url": "https://www.youtube.com/watch?v=s4dePW9Zs6k&t=349",
     "video_id": "s4dePW9Zs6k",
     "upload_date": "20161004"
   },
@@ -53706,7 +53726,7 @@
   },
   {
     "components": [
-      "SW5, SHIFTY, SHIFTY, JAPAN",
+      "SWS, SHIFTY, SHIFTY, JAPAN",
       "L2"
     ],
     "start": 256.130875,
@@ -58240,8 +58260,7 @@
   },
   {
     "components": [
-      "SWRS",
-      "NOSE"
+      "SWRS, NOSE"
     ],
     "start": 73.86545833333332,
     "end": 84.41766666666666,
@@ -59894,7 +59913,7 @@
   },
   {
     "components": [
-      "DUB HD, LS"
+      "DUB HD, L5"
     ],
     "start": 173.63179166666666,
     "end": 180.3468333333333,
@@ -59931,7 +59950,7 @@
   {
     "components": [
       "1",
-      "SWLS, JAPAN",
+      "SWLS5, JAPAN",
       "R RODEO 7, SAFETY"
     ],
     "start": 235.98575,
@@ -59944,7 +59963,7 @@
   {
     "components": [
       "1",
-      "SWLS, JAPAN",
+      "SWLS5, JAPAN",
       "R RODEO 7, SAFETY"
     ],
     "start": 245.57866666666666,
@@ -64406,7 +64425,7 @@
   },
   {
     "components": [
-      "SWLS, SCREAMIN"
+      "SWL5, SCREAMIN"
     ],
     "start": 296.42112499999996,
     "end": 317.52554166666664,
@@ -65905,8 +65924,7 @@
   },
   {
     "components": [
-      "F4",
-      "MIDDLE OF Y"
+      "F4, MIDDLE OF Y"
     ],
     "start": 68.86957018514066,
     "end": 75.56522284202933,
@@ -68270,7 +68288,8 @@
   },
   {
     "components": [
-      "SW, BS 4 SAFETY"
+      "SW",
+      "BS 4 SAFETY"
     ],
     "start": 282.03175,
     "end": 303.13616666666667,
@@ -71265,7 +71284,7 @@
   },
   {
     "components": [
-      "PE OO"
+      "SS"
     ],
     "start": 772.2297916666666,
     "end": 778.9448333333332,

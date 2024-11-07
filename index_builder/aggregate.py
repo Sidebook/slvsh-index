@@ -33,7 +33,16 @@ def aggregate(
             candidates = texts[i_start:i_end]
             # Take a majority of candidates
             if len(candidates) > 0:
-                majority = max(set(c.text for c in candidates), key=lambda x: [c.text for c in candidates].count(x))
+                # Count occurrences of each text while preserving order
+                text_counts = {}
+                for c in candidates:
+                    text_counts[c.text] = text_counts.get(c.text, 0) + 1
+                
+                # Find max count
+                max_count = max(text_counts.values())
+                
+                # Get first text with max count
+                majority = next(text for text, count in text_counts.items() if count == max_count)
                 if majority != "WINNER":
                     tricks.append(Trick(
                         components=decompose(majority),
