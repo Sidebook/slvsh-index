@@ -12,15 +12,13 @@ COPY ./slvsh-tr ./slvsh-tr
 RUN pip install -e ./slvsh-tr
 
 # Copy the current directory contents into the container at /app
-COPY ./server.py /app/
+COPY ./backend /app/backend/
 COPY ./slvsh_index.json /app/
-COPY ./index.html /app/
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
-# Define environment variable
-ENV NAME World
+WORKDIR /app/backend
 
 # Run server.py when the container launches
 CMD ["uvicorn", "server:app", "--host=0.0.0.0"]

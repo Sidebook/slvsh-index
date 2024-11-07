@@ -11,7 +11,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser()
     parser.add_argument('-f','--force', action='store_true', default=False)
-    parser.add_argument('step', type=str, default='all', choices=['download', 'recognize', 'aggregate'])
+    parser.add_argument('step', type=str, default='all', choices=['download', 'recognize', 'aggregate', 'all'])
     args = parser.parse_args()
 
     if args.step == 'download' or args.step == 'all':
@@ -32,6 +32,7 @@ if __name__ == "__main__":
                 'start': t.start,
                 'end': t.end,
                 'title': t.source.title,
-                'url': t.source.url,
+                'url': f'https://www.youtube.com/watch?v={t.source.video_id}&t={int(t.start)}',
+                'video_id': t.source.video_id,
                 'upload_date': t.source.upload_date
             } for t in all_tricks], f, indent=2)

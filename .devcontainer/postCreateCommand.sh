@@ -1,7 +1,8 @@
 #!/bin/bash
 
-set -e
-set -x
+set -ex
 
-pip install -r requirements.txt
+pip install -r ./requirements.txt
 pip install -e ./slvsh-tr
+
+(cd frontend && npm install)
