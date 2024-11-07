@@ -12,7 +12,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5000",
+        "https://slvsh-index-214235098914.asia-northeast1.run.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
