@@ -15,7 +15,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:5000",
-        "https://slvsh-index-214235098914.asia-northeast1.run.app"
+        "https://slvsh-index-214235098914.asia-northeast1.run.app",
+        "https://slvshindex.ruwy.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
