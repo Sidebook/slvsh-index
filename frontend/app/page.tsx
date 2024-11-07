@@ -1,6 +1,5 @@
 import ExampleRoller from "./components/ExampleRoller";
 import SearchBox from "./components/searchBox";
-import { examples } from "./examples";
 
 export default function Home() {
   return (
