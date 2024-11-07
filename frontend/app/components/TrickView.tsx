@@ -41,7 +41,7 @@ const TrickView: React.FC<Props> = (props) => {
         href={props.trick.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="no-underline"
+        className="no-underline whitespace-pre-wrap break-all"
       >
         {props.trick.components.map((component, i) => {
           const matching = isMatch(component, props.what);

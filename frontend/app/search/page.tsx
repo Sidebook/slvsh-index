@@ -109,7 +109,7 @@ const SearchPageInner: React.FC = () => {
                   />
                 </div>
                 <hr className="mx-4 border-[#707070]" />
-                <div className="p-4">
+                <div className="p-4 gap-2 flex flex-col">
                   {tricks.map((trick) => (
                     <TrickView
                       key={`${tricks[0].video_id} ${trick.start}`}

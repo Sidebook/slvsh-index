@@ -30,10 +30,10 @@ const MatchView: React.FC<Props> = (props) => {
         <img
           src={`https://img.youtube.com/vi/${props.video_id}/mqdefault.jpg`}
           alt={`Thumbnail for ${props.title}`}
-          className="w-32 h-18 object-cover rounded-md"
+          className="w-16 h-16 md:w-32 md:h-20 object-cover rounded-md"
         />
       </div>
-      <div className="text-xl flex-1">
+      <div className="md:text-lg flex-1">
         {parts.map((part, index) => (
           <span
             key={index}

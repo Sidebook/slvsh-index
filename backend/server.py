@@ -38,10 +38,10 @@ def get_common_tricks():
         for component in entry["components"]:
             trick_count[component] = trick_count.get(component, 0) + 1
     freq = sorted(trick_count.items(), key=lambda x: x[1], reverse=True)
-    return [comp for comp, count in freq]
+    return [{'trick': comp, 'count': count} for comp, count in freq]
 
 
-common_tricks = get_common_tricks()
+common_tricks = get_common_tricks()[:500]
 
 
 def tokenize(text: str):

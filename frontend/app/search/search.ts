@@ -77,7 +77,6 @@ export const useTrickSearch = (
       hasMore: true,
       nextPage: 0,
     });
-    console.log(what, who, allowAdditions);
     loadNextPage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [what, who, allowAdditions]);
