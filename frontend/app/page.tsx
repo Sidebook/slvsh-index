@@ -18,7 +18,7 @@ export default function Home() {
       <div className="flex-1 basis-0">
         <ExampleRoller />
       </div>
-      <footer className="text-gray-100 p-5">
+      <footer className="text-gray-100 p-5 text-xs md:text-base text-center">
         Made by{" "}
         <span>
           <a href="https://instagram.com/ryu_ski" target="_blank">
