@@ -58,7 +58,7 @@ const SearchBoxInner: React.FC<Props> = ({ className }) => {
             onBlur={() => setShowSuggestions(false)}
           />
           {what.length > 0 && showSuggestions && suggestions.length > 0 && (
-            <div className="absolute w-full mt-1 bg-[#303030] border border-[#505050] rounded-md shadow-lg max-h-60 overflow-y-auto">
+            <div className="absolute w-full mt-1 bg-[#303030] border border-[#505050] rounded-md shadow-lg max-h-60 overflow-y-auto z-50">
               <div className="p-2">
                 <div className="space-y-1">
                   {suggestions.map((suggestion) => (
