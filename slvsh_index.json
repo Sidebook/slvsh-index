@@ -915,7 +915,7 @@
   },
   {
     "components": [
-      "SWS, LEAD MUTE",
+      "SW5, LEAD MUTE",
       "1, PRETZ 1"
     ],
     "start": 185.14328989528963,
@@ -939,7 +939,7 @@
   },
   {
     "components": [
-      "SWS, TAIL TAP, DUB JAPAN"
+      "SW5, TAIL TAP, DUB JAPAN"
     ],
     "start": 227.3521228247857,
     "end": 238.8636227146483,
@@ -1237,7 +1237,7 @@
   },
   {
     "components": [
-      "SWLS, SEATBLET JAPAN"
+      "SWL5, SEATBLET JAPAN"
     ],
     "start": 238.86362499999998,
     "end": 248.45654166666665,
@@ -1615,7 +1615,7 @@
   },
   {
     "components": [
-      "SWRS, DUB JAPAN"
+      "SWR5, DUB JAPAN"
     ],
     "start": 132.38225,
     "end": 140.05658333333332,
@@ -3212,7 +3212,7 @@
   },
   {
     "components": [
-      "SWS, TAIL TAP TO NOSE TAP"
+      "SW5, TAIL TAP TO NOSE TAP"
     ],
     "start": 57.55749937435395,
     "end": 73.86545753042091,
@@ -3318,7 +3318,7 @@
   },
   {
     "components": [
-      "SWS, OVERSHIFTY"
+      "SW5, OVERSHIFTY"
     ],
     "start": 282.03174693433436,
     "end": 291.62466349672667,
@@ -3827,7 +3827,7 @@
   },
   {
     "components": [
-      "FRONTELIP, HD"
+      "FRONTFLIP, HD"
     ],
     "start": 282.99104166666666,
     "end": 305.05474999999996,
@@ -4005,7 +4005,7 @@
   },
   {
     "components": [
-      "FRONTELIP",
+      "FRONTFLIP",
       "BS, F4"
     ],
     "start": 226.3928298487533,
@@ -4240,7 +4240,7 @@
   },
   {
     "components": [
-      "SWS, LEAD BASE CRITICAL"
+      "SW5, LEAD BASE CRITICAL"
     ],
     "start": 231.18929166666666,
     "end": 242.70079166666665,
@@ -4329,7 +4329,7 @@
   },
   {
     "components": [
-      "SWS, JAPAN AND NOSE"
+      "SW5, JAPAN AND NOSE"
     ],
     "start": 385.63525,
     "end": 393.3095833333333,
@@ -4340,7 +4340,7 @@
   },
   {
     "components": [
-      "SWS, JAPAN AND NOSE"
+      "SW5, JAPAN AND NOSE"
     ],
     "start": 396.1874583333333,
     "end": 416.33258333333333,
@@ -4454,7 +4454,7 @@
   },
   {
     "components": [
-      "UNS, STALE",
+      "UN5, STALE",
       "SW7, STALE"
     ],
     "start": 237.9043333333333,
@@ -5182,7 +5182,7 @@
   },
   {
     "components": [
-      "SWS, TAIL TAP, DUB JAPAN"
+      "SW5, TAIL TAP, DUB JAPAN"
     ],
     "start": 333.83349999999996,
     "end": 346.30429166666664,
@@ -5237,7 +5237,7 @@
   },
   {
     "components": [
-      "SWRS",
+      "SWR5",
       "GRAB"
     ],
     "start": 450.8670833333333,
@@ -6798,7 +6798,7 @@
   },
   {
     "components": [
-      "FRONTELIP TAIL"
+      "FRONTFLIP TAIL"
     ],
     "start": 150.95080000000002,
     "end": 161.59476666666666,
@@ -8997,7 +8997,7 @@
   },
   {
     "components": [
-      "FRONTELIP",
+      "FRONTFLIP",
       "LIP, B2",
       "4 DISASTER, B4",
       "SW, TRANNY"
@@ -10698,7 +10698,7 @@
   {
     "components": [
       "4, SW",
-      "SWRS, MUTE",
+      "SWR5, MUTE",
       "SLIDE, 3"
     ],
     "start": 123.74862499999999,
@@ -11015,7 +11015,7 @@
     "components": [
       "BSLIDE, FWD",
       "CORK 5, BLUNT",
-      "SWS, GENIE"
+      "SW5, GENIE"
     ],
     "start": 141.97516666666667,
     "end": 188.98045833333333,
@@ -11235,7 +11235,7 @@
       "LIP, F2",
       "SW, F4",
       "3, LEAD MUTE",
-      "UNS, TAIL"
+      "UN5, TAIL"
     ],
     "start": 350.14145833333333,
     "end": 407.6989583333333,
@@ -11890,7 +11890,7 @@
   {
     "components": [
       "3 NOSE TAP",
-      "NBS TAIL TAP"
+      "NB5 TAIL TAP"
     ],
     "start": 455.75530000000003,
     "end": 489.6224666666667,
@@ -13715,7 +13715,7 @@
   {
     "components": [
       "MISTY 5 STALE",
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 221.58803333333333,
     "end": 251.58466666666666,
@@ -14058,7 +14058,7 @@
   },
   {
     "components": [
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 85.15173333333334,
     "end": 93.86043333333333,
@@ -14069,7 +14069,7 @@
   },
   {
     "components": [
-      "SWTBS",
+      "SWTB5",
       "FS, F4"
     ],
     "start": 105.47203333333333,
@@ -14246,7 +14246,7 @@
     "components": [
       "LF SLIDE, B2",
       "UNDERFLIP",
-      "UN SWS"
+      "UN SW5"
     ],
     "start": 482.84903333333335,
     "end": 537.0365,
@@ -14357,7 +14357,7 @@
   },
   {
     "components": [
-      "FRONTELIP, JAPAN",
+      "FRONTFLIP, JAPAN",
       "1, LEAD JAPAN"
     ],
     "start": 62.35395833333333,
@@ -14809,7 +14809,7 @@
   },
   {
     "components": [
-      "OP CARVE ,RODEO 7, BSA"
+      "OP CARVE ,RODEO 7, B&A"
     ],
     "start": 547.7555416666667,
     "end": 559.2670416666666,
@@ -15307,7 +15307,7 @@
   },
   {
     "components": [
-      "FRONTELIP, LATE 1"
+      "FRONTFLIP, LATE 1"
     ],
     "start": 664.7641,
     "end": 683.1491333333333,
@@ -15640,7 +15640,7 @@
   },
   {
     "components": [
-      "NBS, TAIL DRAG"
+      "NB5, TAIL DRAG"
     ],
     "start": 117.08375041708375,
     "end": 133.53353353353353,
@@ -18243,7 +18243,7 @@
   },
   {
     "components": [
-      "SWTB, NBS"
+      "SWTB, NB5"
     ],
     "start": 264.7644982386042,
     "end": 286.8282064251545,
@@ -19817,7 +19817,7 @@
   },
   {
     "components": [
-      "FRONTELIP, LUIKANG"
+      "FRONTFLIP, LUIKANG"
     ],
     "start": 653.277623018295,
     "end": 676.3006229484552,
@@ -20272,7 +20272,7 @@
   },
   {
     "components": [
-      "SW CORK 3 BSA"
+      "SW CORK 3 B&A"
     ],
     "start": 541.0405,
     "end": 568.8599583333333,
@@ -21513,7 +21513,7 @@
   },
   {
     "components": [
-      "SWS, LEAD TAIL"
+      "SW5, LEAD TAIL"
     ],
     "start": 329.9632966299633,
     "end": 351.2512512512513,
@@ -22220,7 +22220,7 @@
   {
     "components": [
       "CORK 7 NOSE",
-      "NBS"
+      "NB5"
     ],
     "start": 95.7957,
     "end": 128.69523333333333,
@@ -22276,7 +22276,7 @@
   {
     "components": [
       "RODEO 5 BLUNT",
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 254.48756666666668,
     "end": 291.25763333333333,
@@ -24311,7 +24311,7 @@
   },
   {
     "components": [
-      "SWS, SAFETY"
+      "SW5, SAFETY"
     ],
     "start": 33.57520833333333,
     "end": 54.679624999999994,
@@ -24583,7 +24583,7 @@
   },
   {
     "components": [
-      "SWS, DISASTER, 1 OUT"
+      "SW5, DISASTER, 1 OUT"
     ],
     "start": 227.35212499999997,
     "end": 241.74149999999997,
@@ -25888,7 +25888,7 @@
   },
   {
     "components": [
-      "SWRS, JAPAN",
+      "SWR5, JAPAN",
       "TAP, 7 SAFETY"
     ],
     "start": 626.4174583333333,
@@ -26235,7 +26235,7 @@
   },
   {
     "components": [
-      "SW DUB 10, BSA"
+      "SW DUB 10, B&A"
     ],
     "start": 886.3855,
     "end": 922.8385833333333,
@@ -27009,7 +27009,7 @@
   {
     "components": [
       "SWR10, BIO, SAFETY",
-      "AO, SWS"
+      "AO, SW5"
     ],
     "start": 386.59453475589754,
     "end": 407.6989510453014,
@@ -27633,7 +27633,7 @@
   },
   {
     "components": [
-      "OPP CARVE, SWLS, JAPAN"
+      "OPP CARVE, SWL5, JAPAN"
     ],
     "start": 43.168124999999996,
     "end": 63.31325,
@@ -27655,7 +27655,7 @@
   },
   {
     "components": [
-      "SWRS",
+      "SWR5",
       "NOSE"
     ],
     "start": 75.78404166666667,
@@ -27759,7 +27759,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 217.7592083333333,
     "end": 232.1485833333333,
@@ -27951,7 +27951,7 @@
   },
   {
     "components": [
-      "SWLS, CORK, TRAILING SAFETY"
+      "SWL5, CORK, TRAILING SAFETY"
     ],
     "start": 125.66720833333332,
     "end": 142.9344583333333,
@@ -28178,7 +28178,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 181.30612499999998,
     "end": 193.77691666666666,
@@ -28769,7 +28769,7 @@
   },
   {
     "components": [
-      "UNS, RODEO, CRITICAL"
+      "UN5, RODEO, CRITICAL"
     ],
     "start": 301.2175833333333,
     "end": 315.6069583333333,
@@ -28780,7 +28780,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 320.40341666666666,
     "end": 343.4264166666666,
@@ -29057,7 +29057,7 @@
   },
   {
     "components": [
-      "PRE 1, CONTINUING SWS, JAPAN"
+      "PRE 1, CONTINUING SW5, JAPAN"
     ],
     "start": 574.6157083333333,
     "end": 592.8422499999999,
@@ -29459,7 +29459,7 @@
   },
   {
     "components": [
-      "TRANSFER, SWS, BUTTER 1"
+      "TRANSFER, SW5, BUTTER 1"
     ],
     "start": 179.38754166666666,
     "end": 192.817625,
@@ -30521,8 +30521,8 @@
     "components": [
       "AIR",
       "R3, JAPAN",
-      "FRONTELIP",
-      "RS, TAIL"
+      "FRONTFLIP",
+      "R5, TAIL"
     ],
     "start": 539.1219166666666,
     "end": 566.941375,
@@ -30750,7 +30750,7 @@
   },
   {
     "components": [
-      "SWRS, GRAB"
+      "SWR5, GRAB"
     ],
     "start": 344.38570504405885,
     "end": 353.9786216191022,
@@ -30966,7 +30966,7 @@
   {
     "components": [
       "TAIL TAP, SW",
-      "SWRS, GRAB",
+      "SWR5, GRAB",
       "L5, TRAILING OCTO"
     ],
     "start": 240.78220833333333,
@@ -30979,7 +30979,7 @@
   {
     "components": [
       "TAIL TAP, SW",
-      "SWRS, GRAB",
+      "SWR5, GRAB",
       "L5, TRAILING OCTO"
     ],
     "start": 252.2937083333333,
@@ -31002,7 +31002,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 286.8282083333333,
     "end": 301.2175833333333,
@@ -31584,7 +31584,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 259.00874999999996,
     "end": 269.5609583333333,
@@ -31879,7 +31879,7 @@
     "components": [
       "1, SAFETY",
       "ZERO, SAFETY",
-      "SWS, TAIL"
+      "SW5, TAIL"
     ],
     "start": 44.12741645892729,
     "end": 82.49908294495103,
@@ -32007,7 +32007,7 @@
   },
   {
     "components": [
-      "SWLS, DUB JAP",
+      "SWL5, DUB JAP",
       "R RODEO 9, LEAD TAIL"
     ],
     "start": 355.89720665787013,
@@ -32267,7 +32267,7 @@
   },
   {
     "components": [
-      "HD RS"
+      "HD R5"
     ],
     "start": 298.3397062030187,
     "end": 309.85120612082005,
@@ -33020,7 +33020,7 @@
   },
   {
     "components": [
-      "SWRS, OCTO"
+      "SWR5, OCTO"
     ],
     "start": 400.02462243854757,
     "end": 418.2511639885054,
@@ -34575,7 +34575,7 @@
     "components": [
       "GAP, SW",
       "SW, GAP F2",
-      "SWS, TAIL"
+      "SW5, TAIL"
     ],
     "start": 236.94504166666664,
     "end": 262.84591666666665,
@@ -34702,7 +34702,7 @@
     "components": [
       "R3",
       "L5",
-      "SWS"
+      "SW5"
     ],
     "start": 432.64054166666665,
     "end": 452.78566666666666,
@@ -35110,7 +35110,7 @@
     "components": [
       "LIP, B2",
       "L7 TAIL",
-      "RS LEAD TAIL",
+      "R5 LEAD TAIL",
       "SW3"
     ],
     "start": 97.73096666666667,
@@ -35122,7 +35122,7 @@
   },
   {
     "components": [
-      "TT SWS",
+      "TT SW5",
       "F4, LEAD MUTE"
     ],
     "start": 158.69186666666667,
@@ -35602,7 +35602,7 @@
     "components": [
       "SW5, JAP",
       "CORK 5, LEAD JAP",
-      "SWS, TAIL"
+      "SW5, TAIL"
     ],
     "start": 121.83004166666666,
     "end": 156.36454166666667,
@@ -36047,7 +36047,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 632.1732061678867,
     "end": 636.9696644847903,
@@ -36136,7 +36136,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 30.697333333333333,
     "end": 47.005291666666665,
@@ -36384,7 +36384,7 @@
   },
   {
     "components": [
-      "SWS, SAFETY"
+      "SW5, SAFETY"
     ],
     "start": 537.2033333333333,
     "end": 548.7148333333333,
@@ -36496,7 +36496,7 @@
   },
   {
     "components": [
-      "SWS, DUB JAPAN"
+      "SW5, DUB JAPAN"
     ],
     "start": 240.78220833333333,
     "end": 256.130875,
@@ -36518,7 +36518,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 276.27599999999995,
     "end": 285.8689166666666,
@@ -37094,7 +37094,7 @@
   {
     "components": [
       "SW2, B4",
-      "SWS, JAPAN",
+      "SW5, JAPAN",
       "GAP, TRANNY",
       "L2"
     ],
@@ -37652,7 +37652,7 @@
   },
   {
     "components": [
-      "SWS, TRAILING BLUNT"
+      "SW5, TRAILING BLUNT"
     ],
     "start": 87.99999861944542,
     "end": 100.99999841549986,
@@ -37923,7 +37923,7 @@
   },
   {
     "components": [
-      "SWTBS",
+      "SWTB5",
       "UNLIP, BSLIDE, SW",
       "SW CORK 3 SAFETY"
     ],
@@ -38160,7 +38160,7 @@
     "components": [
       "LIP2",
       "HDS",
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 475.8086666666666,
     "end": 508.4245833333333,
@@ -38577,7 +38577,7 @@
   {
     "components": [
       "NB7 SHIFTY",
-      "UNS LEAD MUTE",
+      "UN5 LEAD MUTE",
       "SWTB 7 LEAD MUTE"
     ],
     "start": 135.46866666666668,
@@ -38649,7 +38649,7 @@
     "components": [
       "UN NB7",
       "NB9 LEAD SAFETY",
-      "SWTB TO NBS"
+      "SWTB TO NB5"
     ],
     "start": 340.60693333333336,
     "end": 377.377,
@@ -38766,7 +38766,7 @@
   {
     "components": [
       "5050, UN 3",
-      "NBS, ND 1"
+      "NB5, ND 1"
     ],
     "start": 707.3399666666667,
     "end": 758.6245333333334,
@@ -39381,7 +39381,7 @@
   },
   {
     "components": [
-      "SWLS, SAME NOSE",
+      "SWL5, SAME NOSE",
       "R CORK 3, NG"
     ],
     "start": 148.69020833333332,
@@ -40063,7 +40063,7 @@
   },
   {
     "components": [
-      "SWRS"
+      "SWR5"
     ],
     "start": 411.53612499999997,
     "end": 424.00691666666665,
@@ -40405,7 +40405,7 @@
   },
   {
     "components": [
-      "SWS, MUTE",
+      "SW5, MUTE",
       "5, RODEO, SCREAMIN MUTE",
       "SW9, DUB, SAFETY"
     ],
@@ -40678,7 +40678,7 @@
   },
   {
     "components": [
-      "SWRS, DUB JAPAN",
+      "SWR5, DUB JAPAN",
       "L9, BLUNT"
     ],
     "start": 28.061394728061394,
@@ -40857,7 +40857,7 @@
   },
   {
     "components": [
-      "SWS, BLUNT",
+      "SW5, BLUNT",
       "CORK 9, LEAD CUBAN"
     ],
     "start": 537.0370370370371,
@@ -41220,7 +41220,7 @@
   },
   {
     "components": [
-      "1, SWS"
+      "1, SW5"
     ],
     "start": 621.2206,
     "end": 641.5409,
@@ -41861,7 +41861,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 83.45837499999999,
     "end": 91.13270833333333,
@@ -41916,7 +41916,7 @@
   },
   {
     "components": [
-      "DUB FRONTELIP"
+      "DUB FRONTFLIP"
     ],
     "start": 137.17870833333333,
     "end": 166.91674999999998,
@@ -42311,7 +42311,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 329.03704166666665,
     "end": 334.79279166666663,
@@ -42535,7 +42535,7 @@
   },
   {
     "components": [
-      "SWRS, JAPAN",
+      "SWR5, JAPAN",
       "BIO 9, SAFETY"
     ],
     "start": 56.0,
@@ -42624,7 +42624,7 @@
   },
   {
     "components": [
-      "SWS, LEAD MUTE"
+      "SW5, LEAD MUTE"
     ],
     "start": 190.0,
     "end": 201.0,
@@ -42784,7 +42784,7 @@
     "components": [
       "R3, FLAT",
       "5, UNDERFLIP, TAIL",
-      "SWS, JAPICAL"
+      "SW5, JAPICAL"
     ],
     "start": 46.046,
     "end": 70.02829166666666,
@@ -42890,7 +42890,7 @@
   {
     "components": [
       "L3, CORK, JAPAN",
-      "RS, SAFETY",
+      "R5, SAFETY",
       "SW10, MUTE"
     ],
     "start": 239.82291666666666,
@@ -42903,7 +42903,7 @@
   {
     "components": [
       "L3, CORK, JAPAN",
-      "RS, SAFETY",
+      "R5, SAFETY",
       "SW10, MUTE"
     ],
     "start": 261.886625,
@@ -42928,7 +42928,7 @@
   {
     "components": [
       "TOKYO, B2",
-      "RS, MISTY",
+      "R5, MISTY",
       "SWR7"
     ],
     "start": 292.5839583333333,
@@ -43287,7 +43287,7 @@
   {
     "components": [
       "SW BACKFLIP",
-      "SWLS, TAIPAN"
+      "SWL5, TAIPAN"
     ],
     "start": 321.36270833333333,
     "end": 337.67066666666665,
@@ -43710,7 +43710,7 @@
   {
     "components": [
       "SHIFTY",
-      "NBS"
+      "NB5"
     ],
     "start": 181.30612499999998,
     "end": 199.53266666666664,
@@ -43893,7 +43893,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 118.95216536730267,
     "end": 124.70791530443022,
@@ -43948,7 +43948,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 200.49195614327627,
     "end": 213.92203932990722,
@@ -44652,7 +44652,7 @@
   {
     "components": [
       "CORK 9, LEAD BLUNT",
-      "SWS, JAPAN",
+      "SW5, JAPAN",
       "UN7, BLUNT"
     ],
     "start": 391.8915,
@@ -44909,7 +44909,7 @@
   {
     "components": [
       "SWR7, MUTE",
-      "SWLS, BSA"
+      "SWL5, B&A"
     ],
     "start": 149.6495,
     "end": 176.50966666666665,
@@ -44981,7 +44981,7 @@
   {
     "components": [
       "L1",
-      "SWRS, SAFETY",
+      "SWR5, SAFETY",
       "CORK 5, LEAD JAPAN TO TRAILING JAPAN"
     ],
     "start": 309.8512083333333,
@@ -45018,7 +45018,7 @@
   {
     "components": [
       "SLASH, L5 STALE",
-      "SWRS, JAPAN"
+      "SWR5, JAPAN"
     ],
     "start": 438.3962916666666,
     "end": 467.17504166666663,
@@ -45860,7 +45860,7 @@
   {
     "components": [
       "2, TRANNY",
-      "NBS"
+      "NB5"
     ],
     "start": 617.7838333333333,
     "end": 632.1732083333333,
@@ -45951,7 +45951,7 @@
   },
   {
     "components": [
-      "SWS, NOSE",
+      "SW5, NOSE",
       "F4, BLUNT",
       "2, DISASTER, F2"
     ],
@@ -46733,7 +46733,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 295.46182820579634,
     "end": 314.64766120617276,
@@ -46912,7 +46912,7 @@
   {
     "components": [
       "NOLLIE, SHIFTY, TM, SLIDE",
-      "NBS"
+      "NB5"
     ],
     "start": 202.41054040005426,
     "end": 219.67779029200204,
@@ -47092,7 +47092,7 @@
   {
     "components": [
       "B4",
-      "SWS, TAIL"
+      "SW5, TAIL"
     ],
     "start": 32.615916666666664,
     "end": 54.679624999999994,
@@ -47244,7 +47244,7 @@
   {
     "components": [
       "BACKFLIP",
-      "RS, OPP MUTE",
+      "R5, OPP MUTE",
       "SW5, OVERSHIFTY",
       "NB3, WALLIE 1"
     ],
@@ -47259,7 +47259,7 @@
     "components": [
       "BACKFLIP",
       "R5, OPP MUTE",
-      "SWS, OVERSHIFTY",
+      "SW5, OVERSHIFTY",
       "NB3, WALLIE 1"
     ],
     "start": 326.15916666666664,
@@ -47836,7 +47836,7 @@
   {
     "components": [
       "R5, LEAD JAPAN",
-      "SWLS, SAFETY",
+      "SWL5, SAFETY",
       "LAZYBOY 3"
     ],
     "start": 88.25483333333332,
@@ -48519,7 +48519,7 @@
   },
   {
     "components": [
-      "SWRS, SAFETY",
+      "SWR5, SAFETY",
       "L7, STALE"
     ],
     "start": 114.15570833333332,
@@ -48747,7 +48747,7 @@
   },
   {
     "components": [
-      "FRONTELIP",
+      "FRONTFLIP",
       "9, JAPAN"
     ],
     "start": 389.4724166666666,
@@ -48902,7 +48902,7 @@
   {
     "components": [
       "HD 5",
-      "SWRS JAPAN",
+      "SWR5 JAPAN",
       "BIO 7 MUTE"
     ],
     "start": 361.0,
@@ -49134,7 +49134,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 231.18929166666666,
     "end": 238.86362499999998,
@@ -49295,7 +49295,7 @@
       "R5, CUBAN",
       "SWL5, MUTE",
       "L5, BLUNT",
-      "SWRS, JAPAN"
+      "SWR5, JAPAN"
     ],
     "start": 478.68654166666664,
     "end": 518.0174999999999,
@@ -49836,7 +49836,7 @@
   },
   {
     "components": [
-      "FRONTELIP, DUB TAIL"
+      "FRONTFLIP, DUB TAIL"
     ],
     "start": 330.9556224708357,
     "end": 344.38570570153627,
@@ -49931,7 +49931,7 @@
   },
   {
     "components": [
-      "SWRS, TRUCK"
+      "SWR5, TRUCK"
     ],
     "start": 541.0404958653662,
     "end": 549.674120799388,
@@ -49978,7 +49978,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 644.6439950736278,
     "end": 659.9926616229999,
@@ -50502,7 +50502,7 @@
   },
   {
     "components": [
-      "FRONTELIP",
+      "FRONTFLIP",
       "NB7"
     ],
     "start": 235.02645571098824,
@@ -50538,7 +50538,7 @@
   },
   {
     "components": [
-      "TB, SWS"
+      "TB, SW5"
     ],
     "start": 277.2352885733698,
     "end": 285.86891347703875,
@@ -50741,7 +50741,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 136.21941666666666,
     "end": 142.9344583333333,
@@ -50960,7 +50960,7 @@
   {
     "components": [
       "LF B4",
-      "SWS TAIPAN"
+      "SW5 TAIPAN"
     ],
     "start": 758.7997083333332,
     "end": 793.3342083333333,
@@ -51720,7 +51720,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 76.74333190285164,
     "end": 93.05128993220761,
@@ -51802,7 +51802,7 @@
   {
     "components": [
       "TOKYO, F2",
-      "SWS, MUTE"
+      "SW5, MUTE"
     ],
     "start": 211.044162732842,
     "end": 235.9857456012688,
@@ -51937,7 +51937,7 @@
   },
   {
     "components": [
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 209.1255833333333,
     "end": 217.7592083333333,
@@ -52043,7 +52043,7 @@
   {
     "components": [
       "F6",
-      "SWS",
+      "SW5",
       "BACKFLIP"
     ],
     "start": 404.8210833333333,
@@ -52056,7 +52056,7 @@
   {
     "components": [
       "BACKFLIP",
-      "NBS",
+      "NB5",
       "SLIDE"
     ],
     "start": 442.2334583333333,
@@ -52069,8 +52069,8 @@
   {
     "components": [
       "UNDEREFLIP 5",
-      "SWTBS",
-      "NBS, SHUFFLE 1",
+      "SWTB5",
+      "NB5, SHUFFLE 1",
       "REVERT",
       "LF"
     ],
@@ -52084,8 +52084,8 @@
   {
     "components": [
       "UNDEREFLIP 5",
-      "SWTBS",
-      "NBS, SHUFFLE 1",
+      "SWTB5",
+      "NB5, SHUFFLE 1",
       "REVERT",
       "LF"
     ],
@@ -52637,7 +52637,7 @@
   },
   {
     "components": [
-      "SWS, DUB JAPAN"
+      "SW5, DUB JAPAN"
     ],
     "start": 117.03358133527017,
     "end": 138.13799764163036,
@@ -52860,7 +52860,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 265.72379166666667,
     "end": 275.31670833333334,
@@ -53157,7 +53157,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 306.9733333333333,
     "end": 317.52554166666664,
@@ -53264,7 +53264,7 @@
     "components": [
       "NOSETAP 5, BLUNT",
       "SWR3, SAFETY",
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 108.39995833333333,
     "end": 122.78933333333333,
@@ -53277,7 +53277,7 @@
     "components": [
       "NOSETAP 5, BLUNT",
       "SWR3, SAFETY",
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 125.66720833333332,
     "end": 132.38225,
@@ -53290,7 +53290,7 @@
     "components": [
       "NOSETAP 5, BLUNT",
       "SWR3, SAFETY",
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 135.260125,
     "end": 140.05658333333332,
@@ -53302,7 +53302,7 @@
   {
     "components": [
       "LIP, NOSE PRESS, SW",
-      "SWS, TAIL TAP, JAPAN",
+      "SW5, TAIL TAP, JAPAN",
       "1"
     ],
     "start": 151.56808333333333,
@@ -53350,7 +53350,7 @@
   },
   {
     "components": [
-      "NBS, HD"
+      "NB5, HD"
     ],
     "start": 254.21229166666666,
     "end": 265.72379166666667,
@@ -53362,7 +53362,7 @@
   {
     "components": [
       "LIP, NOSE PRESS, SW",
-      "SWS, TT, DUB JAPAN",
+      "SW5, TT, DUB JAPAN",
       "1"
     ],
     "start": 275.31670833333334,
@@ -53400,7 +53400,7 @@
   },
   {
     "components": [
-      "NOSETAP RS",
+      "NOSETAP R5",
       "SWLIP, B2, HD1"
     ],
     "start": 347.2635833333333,
@@ -53619,8 +53619,8 @@
   },
   {
     "components": [
-      "SWS, TAIL",
-      "NBS"
+      "SW5, TAIL",
+      "NB5"
     ],
     "start": 57.5575,
     "end": 76.74333333333333,
@@ -53726,7 +53726,7 @@
   },
   {
     "components": [
-      "SWS, SHIFTY, SHIFTY, JAPAN",
+      "SW5, SHIFTY, SHIFTY, JAPAN",
       "L2"
     ],
     "start": 256.130875,
@@ -53771,7 +53771,7 @@
   },
   {
     "components": [
-      "SWS, NOSE",
+      "SW5, NOSE",
       "OVER 1, TAIL TAP, SW"
     ],
     "start": 353.97862499999997,
@@ -54210,7 +54210,7 @@
   {
     "components": [
       "OP CARVE HD3, SW",
-      "SWS JAPAN",
+      "SW5 JAPAN",
       "3 MUTE"
     ],
     "start": 435.435,
@@ -54415,7 +54415,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 110.31854166666666,
     "end": 119.91145833333333,
@@ -54437,7 +54437,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 136.21941666666666,
     "end": 155.40525,
@@ -54481,7 +54481,7 @@
   },
   {
     "components": [
-      "SWLS, LEAD TAIL",
+      "SWL5, LEAD TAIL",
       "L9, LEAD SAFETY, TWEAK"
     ],
     "start": 214.88133333333332,
@@ -54615,7 +54615,7 @@
   },
   {
     "components": [
-      "SWS, MISTY, SAFETY",
+      "SW5, MISTY, SAFETY",
       "HDS, BLUNT"
     ],
     "start": 429.76266666666663,
@@ -55055,7 +55055,7 @@
   {
     "components": [
       "1, LEAD BLUNT",
-      "SWTBS, HD"
+      "SWTB5, HD"
     ],
     "start": 404.60869668478676,
     "end": 418.9565228083608,
@@ -55809,7 +55809,7 @@
   },
   {
     "components": [
-      "DTP NBS, NO HANDS"
+      "DTP NB5, NO HANDS"
     ],
     "start": 329.9963300900192,
     "end": 351.1007465492646,
@@ -56658,7 +56658,7 @@
   },
   {
     "components": [
-      "SW DUB 10, BSA"
+      "SW DUB 10, B&A"
     ],
     "start": 197.3973973973974,
     "end": 216.7500834167501,
@@ -56918,7 +56918,7 @@
   },
   {
     "components": [
-      "SWS, BLUNT",
+      "SW5, BLUNT",
       "R5, SAFETY"
     ],
     "start": 108.39995833333333,
@@ -57020,7 +57020,7 @@
   },
   {
     "components": [
-      "SWRS, SAFETY",
+      "SWR5, SAFETY",
       "RODEO 9, MUTE"
     ],
     "start": 303.13616666666667,
@@ -57187,7 +57187,7 @@
   },
   {
     "components": [
-      "DUB FLAT 9, BSA"
+      "DUB FLAT 9, B&A"
     ],
     "start": 132.5658992325659,
     "end": 159.65965965965967,
@@ -57231,7 +57231,7 @@
   },
   {
     "components": [
-      "SWS, TAIPAN",
+      "SW5, TAIPAN",
       "UN 9, GRAB"
     ],
     "start": 234.1675008341675,
@@ -57320,7 +57320,7 @@
   },
   {
     "components": [
-      "DUB FLAT 12, BSA"
+      "DUB FLAT 12, B&A"
     ],
     "start": 446.0794127460794,
     "end": 490.59059059059064,
@@ -57716,7 +57716,7 @@
     "components": [
       "SW3",
       "1",
-      "NBS"
+      "NB5"
     ],
     "start": 275.31670833333334,
     "end": 305.05474999999996,
@@ -57949,7 +57949,7 @@
   },
   {
     "components": [
-      "UNS, STALE",
+      "UN5, STALE",
       "SW5, TRUCK"
     ],
     "start": 305.05474999999996,
@@ -58030,7 +58030,7 @@
   {
     "components": [
       "GAP",
-      "NBS"
+      "NB5"
     ],
     "start": 31.9319,
     "end": 50.31693333333333,
@@ -58238,7 +58238,7 @@
   },
   {
     "components": [
-      "SWLS, TAIPAN"
+      "SWL5, TAIPAN"
     ],
     "start": 40.29025,
     "end": 49.88316666666666,
@@ -58260,7 +58260,7 @@
   },
   {
     "components": [
-      "SWRS, NOSE"
+      "SWR5, NOSE"
     ],
     "start": 73.86545833333332,
     "end": 84.41766666666666,
@@ -59196,7 +59196,7 @@
   },
   {
     "components": [
-      "SW5, BSA",
+      "SW5, B&A",
       "B6"
     ],
     "start": 132.38225,
@@ -59717,7 +59717,7 @@
   {
     "components": [
       "ZERO, HD",
-      "SWTBS"
+      "SWTB5"
     ],
     "start": 476.7679583333333,
     "end": 494.99449999999996,
@@ -59854,7 +59854,7 @@
   },
   {
     "components": [
-      "FRONTELIP",
+      "FRONTFLIP",
       "FLAT 3, JAPAN",
       "L9, OPP TAIL"
     ],
@@ -59925,7 +59925,7 @@
   {
     "components": [
       "1",
-      "SWRS, SAFETY",
+      "SWR5, SAFETY",
       "L BIO 7, TRUCK"
     ],
     "start": 186.1025833333333,
@@ -60258,7 +60258,7 @@
   },
   {
     "components": [
-      "SWLS, TRAILING CRUTON",
+      "SWL5, TRAILING CRUTON",
       "R RODEO 9, MUTE"
     ],
     "start": 385.63525,
@@ -60461,7 +60461,7 @@
   {
     "components": [
       "L7, SAFETY",
-      "AO SWLS, SAFETY"
+      "AO SWL5, SAFETY"
     ],
     "start": 420.1697476474709,
     "end": 440.31487253467844,
@@ -61197,7 +61197,7 @@
   },
   {
     "components": [
-      "NBS",
+      "NB5",
       "SW5 JAPAN"
     ],
     "start": 117.08363333333334,
@@ -61440,7 +61440,7 @@
   },
   {
     "components": [
-      "UNS"
+      "UN5"
     ],
     "start": 686.0520333333334,
     "end": 693.7931,
@@ -61575,7 +61575,7 @@
   },
   {
     "components": [
-      "SWS",
+      "SW5",
       "4, B2"
     ],
     "start": 181.30612499999998,
@@ -61654,7 +61654,7 @@
   },
   {
     "components": [
-      "SWS",
+      "SW5",
       "F2"
     ],
     "start": 376.0423333333333,
@@ -61755,7 +61755,7 @@
   {
     "components": [
       "SW MISTY 9, SAFETY",
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 60.96096096096096,
     "end": 89.98998998999,
@@ -61766,7 +61766,7 @@
   },
   {
     "components": [
-      "5050, FRONTELIP"
+      "5050, FRONTFLIP"
     ],
     "start": 96.76343009676343,
     "end": 110.31031031031031,
@@ -62234,7 +62234,7 @@
   },
   {
     "components": [
-      "SWTBS",
+      "SWTB5",
       "R7, BLUNT"
     ],
     "start": 214.88133333333332,
@@ -62508,7 +62508,7 @@
   },
   {
     "components": [
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 748.2475,
     "end": 762.6368749999999,
@@ -63250,8 +63250,8 @@
   },
   {
     "components": [
-      "NBS",
-      "UN SWS"
+      "NB5",
+      "UN SW5"
     ],
     "start": 894.0940940940941,
     "end": 920.2202202202202,
@@ -63605,7 +63605,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 184.184,
     "end": 193.77691666666666,
@@ -63660,7 +63660,7 @@
   },
   {
     "components": [
-      "RS, STALE MEANT CUBAN"
+      "R5, STALE MEANT CUBAN"
     ],
     "start": 228.31141666666664,
     "end": 237.9043333333333,
@@ -63760,7 +63760,7 @@
   {
     "components": [
       "NOLLIE 1",
-      "SW5 BSA",
+      "SW5 B&A",
       "CORK 7 JAPAN"
     ],
     "start": 29.996633333333335,
@@ -63834,7 +63834,7 @@
   {
     "components": [
       "LAZYBOY 3",
-      "RS JAPAN",
+      "R5 JAPAN",
       "SWL 7 BLUNT"
     ],
     "start": 251.58466666666666,
@@ -64391,7 +64391,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 205.28841666666665,
     "end": 251.33441666666664,
@@ -65277,7 +65277,7 @@
   },
   {
     "components": [
-      "NBS"
+      "NB5"
     ],
     "start": 262.84591666666665,
     "end": 281.0724583333333,
@@ -65335,7 +65335,7 @@
   {
     "components": [
       "5, STALE/CUBAN",
-      "SWS, NOSE"
+      "SW5, NOSE"
     ],
     "start": 369.32729166666667,
     "end": 392.35029166666664,
@@ -65412,7 +65412,7 @@
   },
   {
     "components": [
-      "SWTBS, SAFETY",
+      "SWTB5, SAFETY",
       "MISTY 5"
     ],
     "start": 526.651125,
@@ -65547,8 +65547,8 @@
   },
   {
     "components": [
-      "RS, BLUNT",
-      "SWLS, TAIPAN"
+      "R5, BLUNT",
+      "SWL5, TAIPAN"
     ],
     "start": 204.32912499999998,
     "end": 223.5149583333333,
@@ -65901,7 +65901,7 @@
   },
   {
     "components": [
-      "SWS, JAPAN",
+      "SW5, JAPAN",
       "R7, BLUNT"
     ],
     "start": 35.39130690069728,
@@ -67006,7 +67006,7 @@
   },
   {
     "components": [
-      "SW FRONTELIP"
+      "SW FRONTFLIP"
     ],
     "start": 169.794625,
     "end": 190.89904166666665,
@@ -67600,7 +67600,7 @@
   },
   {
     "components": [
-      "RS, MUTE",
+      "R5, MUTE",
       "SW7, BLUNT"
     ],
     "start": 382.75737499999997,
@@ -67949,7 +67949,7 @@
   {
     "components": [
       "2, FWD",
-      "FRONTELIP"
+      "FRONTFLIP"
     ],
     "start": 423.82382382382383,
     "end": 452.8528528528529,
@@ -69514,7 +69514,7 @@
   },
   {
     "components": [
-      "FRONTELIP",
+      "FRONTFLIP",
       "UN RODEO 5",
       "SW3, SHIFTY"
     ],
@@ -69636,7 +69636,7 @@
   },
   {
     "components": [
-      "SWS, NOSE",
+      "SW5, NOSE",
       "RODEO 5, CRITICAL"
     ],
     "start": 407.6989583333333,
@@ -69648,7 +69648,7 @@
   },
   {
     "components": [
-      "SWS, NOSE",
+      "SW5, NOSE",
       "RODEO 5, CRITICAL"
     ],
     "start": 431.68125,
@@ -69672,7 +69672,7 @@
   {
     "components": [
       "1, NOSE",
-      "SWRS, SAFETY",
+      "SWR5, SAFETY",
       "BLUNTFLIP"
     ],
     "start": 462.3785833333333,
@@ -69685,7 +69685,7 @@
   {
     "components": [
       "1, NOSE",
-      "SWRS, SAFETY",
+      "SWR5, SAFETY",
       "BLUNTFLIP"
     ],
     "start": 473.8900833333333,
@@ -69698,7 +69698,7 @@
   {
     "components": [
       "1, NOSE",
-      "SWRS, SAFETY",
+      "SWR5, SAFETY",
       "BLUNTFLIP"
     ],
     "start": 481.56441666666666,
@@ -71687,7 +71687,7 @@
     "components": [
       "OVER",
       "3, TAP",
-      "NBS"
+      "NB5"
     ],
     "start": 100.725625,
     "end": 117.03358333333333,

@@ -5,9 +5,55 @@ from difflib import SequenceMatcher
 
 logger = logging.getLogger(__name__)
 
+
 def decompose(text: str) -> list[str]:
     text = text.removesuffix('.').removesuffix(',')
     return [t.strip() for t in text.split('.')]
+
+
+def decompose_recoverable(text: str) -> list[str]:
+    tokens = []
+    i = 0
+    while i < len(text):
+        if text[i] in [',', '.', ' ']:
+            tokens.append(text[i])
+            i += 1
+            continue
+        j = i
+        while j < len(text) and text[j] not in [',', '.', ' ']:
+            j += 1
+        tokens.append(text[i:j])
+        i = j
+    return tokens
+
+
+def tweak(trick: Trick) -> Trick:
+    tweaked_components = []
+    for component in trick.components:
+        tokens = decompose_recoverable(component)
+        for i in range(len(tokens)):
+            def replace(old, new):
+                if tokens[i].lower() == old.lower():
+                    tokens[i] = new
+
+            replace('SWS', 'SW5')
+            replace('NBS', 'NB5')
+            replace('SWRS', 'SWR5')
+            replace('SWLS', 'SWL5')
+            replace('SWTBS', 'SWTB5')
+            replace('RS', 'R5')
+            replace('BSA', 'B&A')
+            replace('UNS', 'UN5')
+            replace('FRONTELIP', 'FRONTFLIP')
+
+        tweaked_components.append(''.join(tokens))
+
+    return Trick(**{
+        **trick.model_dump(),
+        'components': tweaked_components,
+        'texts': []  # set empty list to avoid OOM
+    })
+
 
 def aggregate(
     slvsh_match: SLVSHMatch,
@@ -37,12 +83,13 @@ def aggregate(
                 text_counts = {}
                 for c in candidates:
                     text_counts[c.text] = text_counts.get(c.text, 0) + 1
-                
+
                 # Find max count
                 max_count = max(text_counts.values())
-                
+
                 # Get first text with max count
-                majority = next(text for text, count in text_counts.items() if count == max_count)
+                majority = next(
+                    text for text, count in text_counts.items() if count == max_count)
                 if majority != "WINNER":
                     tricks.append(Trick(
                         components=decompose(majority),
@@ -61,12 +108,13 @@ def aggregate(
         if i == 0:
             merged_tricks.append(trick)
             continue
-        
+
         prev_trick = merged_tricks[-1]
         time_diff = trick.start - prev_trick.end
 
-        similarity = SequenceMatcher(None, '.'.join(prev_trick.components), '.'.join(trick.components)).ratio()
-        
+        similarity = SequenceMatcher(None, '.'.join(
+            prev_trick.components), '.'.join(trick.components)).ratio()
+
         if time_diff < 2 and similarity > 0.9:
             # Merge the tricks
             merged_tricks[-1] = Trick(
@@ -79,6 +127,8 @@ def aggregate(
             merged_tricks.append(trick)
 
     tricks = merged_tricks
+
+    tricks = [tweak(t) for t in tricks]
 
     return tricks
 

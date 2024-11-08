@@ -48,6 +48,18 @@ def tokenize(text: str):
     return [token.strip().lower() for token in text.removesuffix(".").replace(",", " ").split()]
 
 
+def get_common_tokens():
+    token_count = {}
+    for entry in slvsh_index:
+        for component in entry["components"]:
+            for token in tokenize(component):
+                token_count[token] = token_count.get(token, 0) + 1
+    freq = sorted(token_count.items(), key=lambda x: x[1], reverse=True)
+    return [{'token': token, 'count': count} for token, count in freq]
+
+common_tokens = get_common_tokens()
+
+
 def title_search(candidates, query: str):
     for trick in candidates:
         if query.lower() in trick['title'].lower():
@@ -121,3 +133,7 @@ async def search_entries(
 @app.get("/api/common_tricks")
 async def get_common_tricks():
     return common_tricks
+
+@app.get("/api/common_tokens")
+async def get_common_tokens():
+    return common_tokens

@@ -26,6 +26,8 @@ if __name__ == "__main__":
         for m in load_slvsh_matches():
             all_tricks.extend(aggregate(m))
 
+        print(f'Writing {len(all_tricks)} tricks to slvsh_index.json')
+
         with open('slvsh_index.json', 'w') as f:
             json.dump([{
                 'components': t.components,
