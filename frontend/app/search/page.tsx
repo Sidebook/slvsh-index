@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useRef } from "react";
 import SearchBox from "../components/searchBox";
@@ -55,9 +56,9 @@ const SearchPageInner: React.FC = () => {
   return (
     <div className="flex flex-col max-w-4xl mx-auto w-full px-4 items-stretch pb-8">
       <h1 className="text-2xl font-bold my-4">
-        <a href="/" className="text-white no-underline text-[2rem]">
+        <Link href="/" className="text-white no-underline text-[2rem]">
           SLVSH INDEX
-        </a>
+        </Link>
       </h1>
 
       <SearchBox className="mb-4" />
