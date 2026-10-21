@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import socket
 import ssl
+from check_chains import verify
 
 ROOTS = json.loads(Path(__file__).with_name('blocked-roots.json').read_text())
 BLOCKED = {r['sha256'].lower() for r in ROOTS}
@@ -21,6 +22,8 @@ def check_store(label, cafile=None):
     assert present, f'{label}: empty trust store'
     assert not present & BLOCKED, f'{label}: compromised roots remain trusted'
     print(f'{label}: blocked roots absent ({len(present)} trusted roots)', flush=True)
+    if cafile:
+        verify(cafile)
     return context
 
 
@@ -42,10 +45,12 @@ def reject(host, context):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--live', action='store_true')
+    parser.add_argument('--probe-live-chains', action='store_true')
     parser.add_argument('--system-only', action='store_true')
     args = parser.parse_args()
     context = check_store('OS/Python')
     if not args.system_only:
+        verify('/etc/ssl/certs/ca-certificates.crt')
         version = importlib.metadata.version('pip')
         assert tuple(map(int, version.split('.'))) >= (26, 2, 2), version
         from pip._vendor import certifi as pip_certifi
@@ -62,6 +67,7 @@ def main():
         for host in ('www.google.com', 'slvshindex.ruwy.app'):
             handshake(host, context)
             print(f'HTTPS accepted: {host}', flush=True)
+    if args.probe_live_chains:
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
             rejected = list(executor.map(lambda host: reject(host, context), HOSTS))
         print(f'Compromised chains rejected: {len(rejected)}/{len(HOSTS)}', flush=True)
