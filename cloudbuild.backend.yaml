@@ -1,14 +1,30 @@
 steps:
   - name: gcr.io/cloud-builders/docker
-    id: Build
-    args: ['build', '--no-cache', '-t', 'asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA', '.', '-f', 'Dockerfile']
-  - name: gcr.io/cloud-builders/docker
-    id: Push
-    args: ['push', 'asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA']
+    id: BuildAndPush
+    entrypoint: bash
+    args:
+      - -ec
+      - |
+        apt-get update && apt-get install -y --no-install-recommends ca-certificates python3
+        sh security/refresh-ca.sh
+        python3 security/check_trust.py --system-only
+        docker build --pull --no-cache -t asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA . -f Dockerfile
+        docker push asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA
+  - name: 'asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA'
+    id: VerifyTrust
+    entrypoint: python
+    args: ['/app/security/check_trust.py', '--live']
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     id: Deploy
-    entrypoint: gcloud
-    args: ['run', 'services', 'update', 'slvsh-index-backend', '--platform=managed', '--image=asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA', '--region=asia-northeast1', '--labels=commit-sha=$COMMIT_SHA', '--quiet']
+    entrypoint: bash
+    env: ['CLOUDSDK_CORE_CUSTOM_CA_CERTS_FILE=/etc/ssl/certs/ca-certificates.crt']
+    args:
+      - -ec
+      - |
+        apt-get update && apt-get install -y --no-install-recommends ca-certificates
+        sh security/refresh-ca.sh
+        python3 security/check_trust.py --system-only
+        gcloud run services update slvsh-index-backend --platform=managed --image=asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA --region=asia-northeast1 --labels=commit-sha=$COMMIT_SHA --quiet
 images:
   - 'asia-northeast1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/slvsh-index-backend:$COMMIT_SHA'
 options:

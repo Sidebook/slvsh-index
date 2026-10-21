@@ -1,11 +1,11 @@
 steps:
-  - name: node:24
+  - name: node:24-bookworm
     dir: frontend
     entrypoint: sh
-    args: ['-c', 'npm ci && npm run build']
-  - name: node:24
+    args: ['-ec', 'apt-get update && apt-get install -y --no-install-recommends ca-certificates curl xz-utils python3 openssl && sh ../security/install-node.sh && node ../security/check_trust.mjs --live && npm ci && npm run build']
+  - name: node:24-bookworm
     dir: frontend
-    entrypoint: npx
-    args: ['--yes', 'firebase-tools@15.34.0', 'deploy', '--only', 'hosting', '--project', 'slvsh-indexx', '--non-interactive']
+    entrypoint: sh
+    args: ['-ec', 'apt-get update && apt-get install -y --no-install-recommends ca-certificates curl xz-utils python3 openssl && sh ../security/install-node.sh && node ../security/check_trust.mjs && npx --yes firebase-tools@15.34.0 deploy --only hosting --project slvsh-indexx --non-interactive']
 options:
   logging: CLOUD_LOGGING_ONLY
