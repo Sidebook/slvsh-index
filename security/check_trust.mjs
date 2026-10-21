@@ -1,5 +1,9 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync, mkdtempSync, writeFileSync, rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {X509Certificate} from 'node:crypto';
 import tls from 'node:tls';
 
@@ -15,6 +19,12 @@ for (const type of ['default', 'bundled', 'system']) {
     const fingerprint = new X509Certificate(pem).fingerprint256.replaceAll(':', '').toLowerCase();
     assert(!blocked.has(fingerprint), `${type}: compromised root remains trusted`);
   }
+  const directory = mkdtempSync(join(tmpdir(), 'slvsh-ca-'));
+  try {
+    const bundle = join(directory, 'roots.pem');
+    writeFileSync(bundle, roots.join('\n'));
+    execFileSync('python3', [fileURLToPath(new URL('./check_chains.py', import.meta.url)), bundle], {stdio: 'inherit'});
+  } finally { rmSync(directory, {recursive: true, force: true}); }
   console.log(`Node ${process.versions.node} ${type}: blocked roots absent (${roots.length} roots)`);
 }
 function handshake(host) {
@@ -30,6 +40,8 @@ if (process.argv.includes('--live')) {
     await handshake(host);
     console.log(`HTTPS accepted: ${host}`);
   }
+}
+if (process.argv.includes('--probe-live-chains')) {
   const hosts = ['dv', 'ov', 'ev'].flatMap(usage => ['g3b', 'g3c'].flatMap(generation =>
     ['', '-aaa'].map(cross => `${usage}-${generation}${cross}-emudhra.we-have-a-problem.com`)));
   const certificateErrors = new Set(['UNABLE_TO_GET_ISSUER_CERT', 'DEPTH_ZERO_SELF_SIGNED_CERT',
