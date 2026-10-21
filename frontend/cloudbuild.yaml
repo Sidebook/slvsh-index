@@ -1,0 +1,11 @@
+steps:
+  - name: node:24
+    dir: frontend
+    entrypoint: sh
+    args: ['-c', 'npm ci && npm run build']
+  - name: node:24
+    dir: frontend
+    entrypoint: npx
+    args: ['--yes', 'firebase-tools@15.34.0', 'deploy', '--only', 'hosting', '--project', 'slvsh-indexx', '--non-interactive']
+options:
+  logging: CLOUD_LOGGING_ONLY

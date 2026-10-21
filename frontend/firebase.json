@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "site": "slvsh-indexx",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "run": {
+          "serviceId": "slvsh-index-backend",
+          "region": "asia-northeast1"
+        }
+      }
+    ]
+  }
+}
