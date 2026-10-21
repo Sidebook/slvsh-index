@@ -9,3 +9,5 @@ tqdm
 pytesseract
 pandas
 google-cloud-storage
+# eMudhra root-store remediation for requests and index tooling.
+certifi>=2026.10.19
