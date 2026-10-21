@@ -1,6 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/python:1-3.12-bookworm
 
-RUN apt-get update \
+RUN rm -f /etc/apt/sources.list.d/yarn.list \
+    && apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl xz-utils libgl1 libglib2.0-0 tesseract-ocr \
     && dpkg --compare-versions "$(dpkg-query -W -f='${Version}' ca-certificates)" ge '20250419~deb12u2' \
     && rm -rf /var/lib/apt/lists/* \
