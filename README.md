@@ -13,6 +13,12 @@ served at https://slvshindex.ruwy.app. `/api/**` rewrites to the
 `slvsh-index-backend` Cloud Run service in Tokyo (`asia-northeast1`).
 The API image is also stored in Artifact Registry in Tokyo.
 
+The API runs as `slvsh-api-runtime@slvsh-indexx.iam.gserviceaccount.com`.
+This identity has no project IAM roles or user-managed keys: the API only reads
+the JSON index packaged inside its image and needs no Google Cloud API access.
+Cloud Build keeps the deployment permissions and attaches this runtime identity
+explicitly on every deployment. Do not grant deployment roles to the API identity.
+
 Pushes to `main` run `frontend/cloudbuild.yaml` for Hosting and
 `cloudbuild.backend.yaml` for the API. The frontend uses the same-origin API
 URL in production. No external load balancer or Cloud Armor policy is needed
